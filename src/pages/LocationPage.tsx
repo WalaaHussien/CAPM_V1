@@ -69,7 +69,7 @@ const LocationPage: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center gap-4 mb-16">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=30.10753823911962,31.753867557671754" target="_blank" rel="noopener noreferrer"><Button size="lg" className="rounded-[8px]"><MapPin className="w-4 h-4 mr-2" />{t('location.directions')}</Button></a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=30.10753823911962,31.753867557671754" target="_blank" rel="noopener noreferrer"><Button size="lg" className="rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground"><MapPin className="w-4 h-4 mr-2" />{t('location.directions')}</Button></a>
             <a href="https://www.google.com/maps?q=30.10753823911962,31.753867557671754&t=k" target="_blank" rel="noopener noreferrer"><Button size="lg" variant="outline" className="rounded-[8px]">{t('location.satellite')}</Button></a>
           </div>
           <div className="grid md:grid-cols-2 gap-5 max-w-2xl mx-auto mb-20">
