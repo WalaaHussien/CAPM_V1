@@ -95,7 +95,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo - swaps between light/dark based on scroll */}
-          <Link to="/" className="flex items-center relative h-12 md:h-14">
+          <Link to="/" className="flex items-center relative h-16 md:h-20">
             {/* Light logo sets the width, dark overlays on top */}
             <img
               src={lightLogo}
