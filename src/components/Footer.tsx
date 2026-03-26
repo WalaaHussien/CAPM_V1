@@ -131,17 +131,17 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-white/60">
               {t('footer.copyright')}
             </p>
             <div className="flex gap-6 text-xs">
-              <a href="#" className="text-white/40 hover:text-white/70 transition-colors">
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
                 {t('footer.privacy')}
               </a>
-              <a href="#" className="text-white/40 hover:text-white/70 transition-colors">
+              <a href="#" className="text-white/60 hover:text-white transition-colors">
                 {t('footer.terms')}
               </a>
             </div>
