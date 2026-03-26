@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="absolute -bottom-5 -right-5 bg-accent text-accent-foreground rounded-xl p-5 shadow-lg">
                 <span className="text-2xl font-bold block">6+</span>
-                <span className="text-xs text-primary-foreground/70">{t('about.years')}</span>
+                <span className="text-xs text-accent-foreground/70">{t('about.years')}</span>
               </div>
             </motion.div>
           </div>
