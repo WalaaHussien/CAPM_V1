@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Eye, Heart, Award, Users, Building2, Stethoscope, ShieldCheck } from 'lucide-react';
+import { Target, Eye, Heart, Award, Users, Building2, Stethoscope, ShieldCheck, Briefcase, GraduationCap, Landmark, Globe } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
