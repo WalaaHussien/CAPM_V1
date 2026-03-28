@@ -199,7 +199,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-foreground leading-tight;
+    @apply text-3xl md:text-4xl font-bold text-foreground leading-tight font-display;
   }
 
   .section-subtitle {
