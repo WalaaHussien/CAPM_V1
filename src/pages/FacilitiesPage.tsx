@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Hotel, ShoppingBag, UtensilsCrossed, Car, Wifi, Coffee, Flower2 } from 'lucide-react';
+import { Hotel, ShoppingBag, UtensilsCrossed, Car, Wifi, Coffee, Flower2, Building2, Heart, Brain, Baby, Bone, Ribbon, FlaskConical, Syringe, Stethoscope, Eye, Ear, Activity, Cpu, Users } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
