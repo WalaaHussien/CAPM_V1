@@ -549,7 +549,7 @@ const CampusMapPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
-      
+      <QuickAccessBar />
       <div className="relative h-screen pt-16">
         {/* ─── 3D Canvas ─── */}
         <Canvas shadows camera={{ position: [0, 60, 80], fov: 45 }} className="absolute inset-0"
