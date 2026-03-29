@@ -19,7 +19,7 @@ const QuickAccessBar: React.FC = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.3 }}
-      className="bg-card border-b border-border shadow-sm sticky top-[5rem] md:top-[6rem] z-40"
+      className="bg-card border-b border-border shadow-sm sticky top-0 z-40"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-12 gap-2">
