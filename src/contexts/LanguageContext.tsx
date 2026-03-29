@@ -864,6 +864,25 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.location': 'الموقع',
     'nav.faq': 'الأسئلة الشائعة',
     'nav.patientPortal': 'بوابة المريض',
+    'nav.healthcareOverview': 'نظرة عامة على الرعاية الصحية',
+
+    // MegaMenu descriptions
+    'mega.corporate': 'الشركات',
+    'mega.resources': 'الموارد',
+    'mega.facilities.desc': 'مرافق طبية عالمية المستوى',
+    'mega.medicalTourism.desc': 'خدمات المرضى الدوليين',
+    'mega.research.desc': 'الابتكار والتجارب السريرية',
+    'mega.partnerships.desc': 'تعاون عالمي',
+    'mega.devPhases.desc': 'معالم المشروع',
+    'mega.investment.desc': 'علاقات المستثمرين',
+    'mega.healthcareOverview.desc': 'البحث وتحليل السوق',
+    'mega.patientPortal.desc': 'الوصول إلى سجلاتك الصحية',
+    'mega.insurance.desc': 'معلومات التأمين والفوترة',
+    'mega.news.desc': 'آخر الأخبار والتحديثات',
+    'mega.careers.desc': 'انضم إلى فريقنا',
+    'mega.location.desc': 'الوصول والاتجاهات',
+    'mega.faq.desc': 'الأسئلة المتكررة',
+
 
     // Hero
     'hero.title': 'كابيتال ميد',
