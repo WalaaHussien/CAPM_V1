@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import QuickAccessBar from '@/components/QuickAccessBar';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import QuickAccessBar from '@/components/QuickAccessBar';
 import Stats from '@/components/Stats';
 import Services from '@/components/Services';
 import About from '@/components/About';
@@ -19,10 +19,10 @@ const Index: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-background"
     >
+      <QuickAccessBar />
       <Header />
       <main>
         <Hero />
-        <QuickAccessBar />
         <Pillars />
         <Stats />
         <Services />

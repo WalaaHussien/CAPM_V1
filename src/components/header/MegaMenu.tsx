@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Building2, Plane, FlaskConical, Handshake, Layers, TrendingUp,
-  Shield, Newspaper, Briefcase, MapPin, HelpCircle, User
+  Shield, Newspaper, Briefcase, MapPin, HelpCircle, User, BarChart3
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -30,6 +30,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose }) => {
         { icon: Handshake, label: t('nav.partnerships'), href: '/partnerships', desc: 'Global collaborations' },
         { icon: Layers, label: t('nav.developmentPhases'), href: '/development-phases', desc: 'Project milestones' },
         { icon: TrendingUp, label: t('nav.investment'), href: '/investment', desc: 'Investor relations' },
+        { icon: BarChart3, label: 'Healthcare Overview', href: '/healthcare-overview', desc: 'Research & market analysis' },
       ],
     },
     {

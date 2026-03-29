@@ -14,7 +14,119 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      medical_records: {
+        Row: {
+          created_at: string | null
+          date: string | null
+          department: string | null
+          description: string | null
+          doctor_name: string | null
+          id: string
+          notes: string | null
+          patient_id: string
+          record_type: string
+          results: Json | null
+          title: string
+        }
+        Insert: {
+          created_at?: string | null
+          date?: string | null
+          department?: string | null
+          description?: string | null
+          doctor_name?: string | null
+          id?: string
+          notes?: string | null
+          patient_id: string
+          record_type: string
+          results?: Json | null
+          title: string
+        }
+        Update: {
+          created_at?: string | null
+          date?: string | null
+          department?: string | null
+          description?: string | null
+          doctor_name?: string | null
+          id?: string
+          notes?: string | null
+          patient_id?: string
+          record_type?: string
+          results?: Json | null
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "medical_records_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      patients: {
+        Row: {
+          address: string | null
+          allergies: string[] | null
+          blood_type: string | null
+          chronic_conditions: string[] | null
+          created_at: string | null
+          current_medications: string[] | null
+          date_of_birth: string | null
+          email: string | null
+          emergency_contact_name: string | null
+          emergency_contact_phone: string | null
+          gender: string | null
+          id: string
+          insurance_number: string | null
+          insurance_provider: string | null
+          name: string
+          patient_id: string
+          phone: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          address?: string | null
+          allergies?: string[] | null
+          blood_type?: string | null
+          chronic_conditions?: string[] | null
+          created_at?: string | null
+          current_medications?: string[] | null
+          date_of_birth?: string | null
+          email?: string | null
+          emergency_contact_name?: string | null
+          emergency_contact_phone?: string | null
+          gender?: string | null
+          id?: string
+          insurance_number?: string | null
+          insurance_provider?: string | null
+          name: string
+          patient_id: string
+          phone?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          address?: string | null
+          allergies?: string[] | null
+          blood_type?: string | null
+          chronic_conditions?: string[] | null
+          created_at?: string | null
+          current_medications?: string[] | null
+          date_of_birth?: string | null
+          email?: string | null
+          emergency_contact_name?: string | null
+          emergency_contact_phone?: string | null
+          gender?: string | null
+          id?: string
+          insurance_number?: string | null
+          insurance_provider?: string | null
+          name?: string
+          patient_id?: string
+          phone?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

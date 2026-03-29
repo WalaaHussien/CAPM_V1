@@ -8,8 +8,8 @@ const QuickAccessBar: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
   const actions = [
-    { icon: Users, label: t('quick.bar.patients'), href: '/patient-portal', color: 'bg-primary hover:bg-primary/90 text-primary-foreground' },
-    { icon: Stethoscope, label: t('quick.bar.doctors'), href: '/doctors', color: 'bg-secondary hover:bg-secondary/90 text-secondary-foreground' },
+    { icon: Users, label: t('quick.bar.patients'), href: '/patient-portal', color: 'bg-white/20 hover:bg-white/30 text-white' },
+    { icon: Stethoscope, label: t('quick.bar.doctors'), href: '/doctors', color: 'bg-white/20 hover:bg-white/30 text-white' },
     { icon: CalendarCheck, label: t('quick.bar.bookNow'), href: '/contact', color: 'bg-accent hover:bg-accent/90 text-accent-foreground' },
     { icon: Siren, label: t('quick.bar.emergency'), href: 'tel:16999', color: 'bg-destructive hover:bg-destructive/90 text-destructive-foreground', isExternal: true },
   ];
@@ -19,7 +19,7 @@ const QuickAccessBar: React.FC = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.3 }}
-      className="bg-card border-b border-border shadow-sm sticky top-[5rem] md:top-[6rem] z-40"
+      className="bg-primary/95 backdrop-blur-sm border-b border-primary/20 shadow-sm z-[51] relative"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-12 gap-2">
@@ -49,10 +49,10 @@ const QuickAccessBar: React.FC = () => {
           {/* Hotline */}
           <a
             href="tel:16999"
-            className="hidden sm:flex items-center gap-2 px-4 py-1.5 bg-destructive/10 rounded-full hover:bg-destructive/20 transition-colors group"
+            className="hidden sm:flex items-center gap-2 px-4 py-1.5 bg-white/15 rounded-full hover:bg-white/25 transition-colors group"
           >
-            <Phone className="w-3.5 h-3.5 text-destructive animate-pulse" />
-            <span className="text-xs font-bold text-destructive">{t('quick.bar.hotline')}: 16999</span>
+            <Phone className="w-3.5 h-3.5 text-white animate-pulse" />
+            <span className="text-xs font-bold text-white">{t('quick.bar.hotline')}: 16999</span>
           </a>
         </div>
       </div>

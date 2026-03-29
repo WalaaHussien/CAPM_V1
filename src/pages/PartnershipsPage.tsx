@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Microscope, Stethoscope, Cpu } from 'lucide-react';
+import { GraduationCap, Microscope, Stethoscope, Cpu, Building2, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
@@ -18,6 +18,17 @@ const partners = [
   { name: 'Singapore General Hospital', country: 'Singapore', type: 'Clinical', focus: 'Multi-specialty', key: false },
   { name: 'Cleveland Clinic', country: 'USA', type: 'Clinical', focus: 'Heart Care', key: false },
   { name: 'Karolinska Institute', country: 'Sweden', type: 'Research', focus: 'Research', key: false },
+];
+
+const brandEntities = [
+  { name: 'ElKalaa Ventures', desc: 'A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla', logo: '/images/brands/elkalaa-ventures.png' },
+  { name: 'Egyptian Society for Quality in Health Care (ESQ)', desc: 'Promoting quality standards in Egyptian healthcare', logo: '/images/brands/esq.jpg' },
+  { name: 'Futures Foundation', desc: 'Foundation for Education Training and Development', logo: '/images/brands/futures.jpg' },
+  { name: 'GS1 Egypt', desc: 'Global standards for business communication', logo: '/images/brands/gs1.png' },
+  { name: 'BUC — Badr University in Cairo', desc: 'Premier university offering medical and healthcare education', logo: '/images/brands/buc.jpg' },
+  { name: 'CIRA', desc: 'Cairo for Investment and Real Estate Development S.A.E.', logo: '/images/brands/cira.png' },
+  { name: 'EHCS', desc: 'Egyptians for Health Care Services — The company that owns CAPITALMED', logo: '/images/brands/ehcs.jpg' },
+  { name: 'CAPITALMED', desc: 'The Capital of Medicine in the Middle East — Healthcare City', logo: '/images/brands/capitalmed.png' },
 ];
 
 const PartnershipsPage: React.FC = () => {
@@ -44,6 +55,28 @@ const PartnershipsPage: React.FC = () => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="flex justify-center gap-10">
               {[{ n: '15+', l: t('partnerships.stats.partners') }, { n: '8', l: t('partnerships.stats.countries') }, { n: '4', l: t('partnerships.stats.continents') }].map((s, i) => (
                 <div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.n}</p><p className="text-xs text-white/50">{s.l}</p></div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Brand Architecture Section */}
+        <section className="bg-muted/50 py-20">
+          <div className="container mx-auto px-6">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+              <p className="section-label">Corporate Structure</p>
+              <h2 className="section-title">Brand Architecture</h2>
+              <p className="section-subtitle">A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla</p>
+            </motion.div>
+            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {brandEntities.map((entity, i) => (
+                <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-5 text-center">
+                  <div className="h-16 flex items-center justify-center mb-4">
+                    <img src={entity.logo} alt={entity.name} className="max-h-16 max-w-[120px] object-contain" loading="lazy" />
+                  </div>
+                  <h3 className="font-semibold text-sm mb-2">{entity.name}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{entity.desc}</p>
+                </motion.div>
               ))}
             </motion.div>
           </div>
