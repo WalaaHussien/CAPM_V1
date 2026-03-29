@@ -170,6 +170,7 @@ const Header: React.FC = () => {
       </div>
 
       <MobileNav isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <QuickAccessBar />
     </motion.header>
   );
 };
