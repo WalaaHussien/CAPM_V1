@@ -48,8 +48,8 @@ const Header: React.FC = () => {
     megaMenuTimeout.current = setTimeout(() => setIsMegaMenuOpen(false), 200);
   };
 
-  const textColor = isScrolled ? 'text-foreground' : 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]';
-  const hoverColor = isScrolled ? 'hover:text-primary' : 'hover:text-white/70';
+  const textColor = 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]';
+  const hoverColor = 'hover:text-white/70';
 
   return (
     <motion.header
