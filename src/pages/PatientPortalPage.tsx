@@ -160,13 +160,13 @@ const PatientPortalPage: React.FC = () => {
   if (patient) {
     return (
       <PageLayout showFooter={true}>
-        <section className="page-hero !py-10">
+        <section className="page-hero !py-10 !pt-14">
           <div className="container mx-auto px-6 relative z-10">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-white/60 text-sm mb-1">{t('portal.welcome')}</p>
-                <h1 className="text-2xl md:text-3xl font-bold text-white">{patient.name}</h1>
-                <p className="text-white/50 text-xs mt-1">{t('portal.patientId')}: {patient.patient_id}</p>
+            <div className="flex items-center justify-between gap-4">
+              <div className="py-2">
+                <p className="text-white/60 text-sm mb-2">{t('portal.welcome')}</p>
+                <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">{patient.name}</h1>
+                <p className="text-white/50 text-xs mt-2">{t('portal.patientId')}: {patient.patient_id}</p>
               </div>
               <Button variant="outline" onClick={handleLogout} className="border-white/20 text-white hover:bg-white/10">
                 <LogOut className="w-4 h-4 mr-2" /> {t('portal.logout')}

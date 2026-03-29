@@ -19,7 +19,7 @@ const QuickAccessBar: React.FC = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.3 }}
-      className="bg-primary/95 backdrop-blur-sm border-b border-primary/20 shadow-sm z-[51] relative"
+      className="bg-primary/95 backdrop-blur-sm border-b border-primary/20 shadow-sm relative"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-12 gap-2">

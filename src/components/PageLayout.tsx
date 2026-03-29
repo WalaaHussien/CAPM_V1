@@ -17,8 +17,12 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) 
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-background"
     >
-      <QuickAccessBar />
-      <Header />
+      <div className="fixed top-0 left-0 right-0 z-[51]">
+        <QuickAccessBar />
+      </div>
+      <div className="pt-12">
+        <Header />
+      </div>
       <main>{children}</main>
       {showFooter && <Footer />}
     </motion.div>
