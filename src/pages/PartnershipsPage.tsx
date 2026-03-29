@@ -84,9 +84,9 @@ const PartnershipsPage: React.FC = () => {
         <section className="bg-muted/50 py-20">
           <div className="container mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-              <p className="section-label">Corporate Structure</p>
-              <h2 className="section-title">Brand Architecture</h2>
-              <p className="section-subtitle">A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla</p>
+              <p className="section-label">{language === 'ar' ? 'الهيكل المؤسسي' : 'Corporate Structure'}</p>
+              <h2 className="section-title">{language === 'ar' ? 'هيكل العلامات التجارية' : 'Brand Architecture'}</h2>
+              <p className="section-subtitle">{language === 'ar' ? 'مجموعة صناعات في الصحة والتعليم والاستثمار، بقيادة د. حسن القلعة' : 'A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla'}</p>
             </motion.div>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
               {brandEntities.map((entity, i) => {
