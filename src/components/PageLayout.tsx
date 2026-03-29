@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import QuickAccessBar from '@/components/QuickAccessBar';
 import Header from '@/components/Header';
@@ -10,6 +10,17 @@ interface PageLayoutProps {
 }
 
 const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 12);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,8 +29,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) 
       className="min-h-screen overflow-visible bg-background isolate"
       style={{ '--quick-access-height': '3rem' } as React.CSSProperties}
     >
-      <QuickAccessBar />
-      <Header />
+      <QuickAccessBar isScrolled={isScrolled} />
+      <Header isScrolled={isScrolled} />
       <main className="relative z-0">{children}</main>
       {showFooter && <Footer />}
     </motion.div>

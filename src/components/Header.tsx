@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Menu, ChevronDown, Globe, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import darkLogo from '@/assets/dark_logo.svg';
 import lightLogo from '@/assets/light_logo.svg';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,19 +13,16 @@ import MegaMenu from '@/components/header/MegaMenu';
 import MobileNav from '@/components/header/MobileNav';
 import SearchBar from '@/components/SearchBar';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  isScrolled?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ isScrolled = false }) => {
   const { language, setLanguage, t, isRTL } = useLanguage();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const location = useLocation();
   const megaMenuTimeout = useRef<ReturnType<typeof setTimeout>>();
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     setIsMegaMenuOpen(false);
@@ -47,25 +45,27 @@ const Header: React.FC = () => {
     megaMenuTimeout.current = setTimeout(() => setIsMegaMenuOpen(false), 200);
   };
 
-  const textColor = 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]';
-  const hoverColor = 'hover:text-white/70';
+  const textColor = isScrolled
+    ? 'text-foreground'
+    : 'text-primary-foreground drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]';
+  const hoverColor = isScrolled ? 'hover:text-primary' : 'hover:text-primary-foreground/70';
+  const headerSurface = isScrolled
+    ? 'bg-background/95 border-b border-border/80 shadow-sm backdrop-blur-lg'
+    : 'bg-primary-dark/95 backdrop-blur-sm';
+  const utilityTextColor = isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/70';
 
   return (
     <motion.header
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`sticky top-[var(--quick-access-height)] z-50 w-full transition-all duration-500 ${
-        isScrolled
-          ? 'bg-primary-dark backdrop-blur-lg shadow-sm border-b border-border/50'
-          : 'bg-primary-dark/95 backdrop-blur-sm'
-      }`}
+      className={`sticky top-[var(--quick-access-height)] z-50 w-full transition-[background-color,border-color,box-shadow] duration-300 ${headerSurface}`}
     >
       {/* Top Bar */}
-      <div className="hidden md:block border-b border-white/10">
+      <div className={`hidden md:block border-b ${isScrolled ? 'border-border/70' : 'border-primary-foreground/10'}`}>
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-9 text-xs">
-            <div className="flex items-center gap-4 text-white/70">
+            <div className={`flex items-center gap-4 ${utilityTextColor}`}>
               <a href="tel:+201234567890" className="flex items-center gap-1.5 hover:text-accent transition-colors">
                 <Phone className="w-3 h-3" />
                 <span>+20 2 1234 5678</span>
@@ -74,7 +74,11 @@ const Header: React.FC = () => {
             <div className="flex items-center gap-3">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className={`h-7 text-xs ${textColor}`}>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className={`h-7 text-xs ${textColor} ${isScrolled ? 'hover:bg-muted' : 'hover:bg-primary-foreground/10'}`}
+                  >
                     <Globe className="w-3.5 h-3.5 mr-1" />
                     {language === 'en' ? 'EN' : 'عربي'}
                     <ChevronDown className="w-3 h-3 ml-0.5" />
@@ -96,7 +100,7 @@ const Header: React.FC = () => {
           {/* Logo - swaps between light/dark based on scroll */}
           <Link to="/" className="relative flex h-16 shrink-0 items-center md:h-20">
             <img
-              src={lightLogo}
+              src={isScrolled ? darkLogo : lightLogo}
               alt="CapitalMed"
               className="h-full w-auto object-contain"
             />
@@ -145,7 +149,7 @@ const Header: React.FC = () => {
             <Button
               variant="ghost"
               size="icon"
-              className={textColor}
+              className={`${textColor} ${isScrolled ? 'hover:bg-muted' : 'hover:bg-primary-foreground/10'}`}
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <Menu className="w-6 h-6" />
