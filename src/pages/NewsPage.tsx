@@ -134,7 +134,7 @@ const NewsPage: React.FC = () => {
                         <div className="border-t border-border pt-3 mb-3">
                           <p className="text-sm text-foreground leading-relaxed">{article.fullContent}</p>
                         </div>
-                      </PageLayout>
+                      </motion.div>
                     )}
                   </AnimatePresence>
 
@@ -156,7 +156,7 @@ const NewsPage: React.FC = () => {
                 </div>
               </motion.article>
             ))}
-          </PageLayout>
+          </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="premium-card p-8 text-center max-w-lg mx-auto">
             <h2 className="text-xl font-bold mb-3">{t('news.newsletter.title')}</h2>
@@ -165,7 +165,7 @@ const NewsPage: React.FC = () => {
               <Input placeholder={t('news.newsletter.placeholder')} type="email" className="rounded-[6px]" />
               <Button className="rounded-[8px]">{t('news.newsletter.subscribe')}</Button>
             </div>
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

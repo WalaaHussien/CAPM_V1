@@ -202,7 +202,7 @@ const DoctorsPage: React.FC = () => {
                     <Button size="sm" variant="outline" className="rounded-[8px]"><Phone className="w-3.5 h-3.5" /></Button>
                   </div>
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
           {filteredDoctors.length === 0 && (

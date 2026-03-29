@@ -59,7 +59,7 @@ const InsurancePage: React.FC = () => {
               className="flex justify-center gap-4">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-[8px] px-8 h-12 text-sm font-semibold shadow-lg shadow-accent/30">{t('insurance.check')}</Button>
               <Button size="lg" className="bg-white text-foreground hover:bg-white/90 rounded-[8px] px-8 h-12 text-sm font-semibold border-0">{t('insurance.billing')}</Button>
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
 
@@ -105,35 +105,35 @@ const InsurancePage: React.FC = () => {
             ) : (
               <p className="text-xs text-muted-foreground mt-3">{t('insurance.search.popular')}</p>
             )}
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('insurance.journey.title')}</h2>
             <p className="section-subtitle">{t('insurance.journey.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <div className="max-w-2xl mx-auto space-y-6 mb-20">
             {billingSteps.map((step, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="flex gap-5">
                 <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shrink-0">{step.step}</div>
                 <div><h3 className="font-semibold mb-1">{step.title}</h3><p className="text-muted-foreground text-sm">{step.desc}</p></div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('insurance.payment.title')}</h2>
             <p className="section-subtitle">{t('insurance.payment.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {paymentOptions.map((opt, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
                 <opt.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{opt.title}</h3>
                 <p className="text-xs text-muted-foreground">{opt.desc}</p>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

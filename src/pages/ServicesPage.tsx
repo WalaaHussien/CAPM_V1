@@ -84,9 +84,9 @@ const ServicesPage: React.FC = () => {
                   <span>{t('services.learn.more')}</span>
                   <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </div>
       </section>
 
@@ -114,11 +114,11 @@ const ServicesPage: React.FC = () => {
               <Button size="lg" className="bg-destructive hover:bg-destructive/90 text-white rounded-[8px]">
                 {t('services.emergency.call')}
               </Button>
-            </PageLayout>
+            </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
               className="aspect-video rounded-xl overflow-hidden bg-white/5 border border-white/10">
               <img src={heroImage2} alt="Emergency" className="w-full h-full object-cover opacity-80" />
-            </PageLayout>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -140,7 +140,7 @@ const ServicesPage: React.FC = () => {
                 </Button>
               </Link>
             </div>
-          </PageLayout>
+          </motion.div>
         </div>
       </section>
 

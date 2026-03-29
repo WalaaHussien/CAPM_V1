@@ -46,7 +46,7 @@ const FAQPage: React.FC = () => {
               className="relative max-w-lg mx-auto">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input placeholder={t('faq.search.placeholder')} value={search} onChange={e => setSearch(e.target.value)} className="pl-11 h-11 rounded-[6px] bg-white text-foreground" />
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
         <section className="container mx-auto px-6 py-20 max-w-2xl">
@@ -59,7 +59,7 @@ const FAQPage: React.FC = () => {
                   <AccordionTrigger className="text-left text-sm hover:no-underline">{faq.q}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground text-sm">{faq.a}</AccordionContent>
                 </AccordionItem>
-              </PageLayout>
+              </motion.div>
             ))}
           </Accordion>
           {filteredFaqs.length === 0 && <p className="text-center text-muted-foreground py-8">{t('careers.noResults')}</p>}
@@ -79,9 +79,9 @@ const FAQPage: React.FC = () => {
                 <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
                 <p className="text-xs text-muted-foreground mb-3">{item.desc}</p>
                 <Button size="sm" variant={item.variant} className="rounded-[8px]">{item.btn}</Button>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

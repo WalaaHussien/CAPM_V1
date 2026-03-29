@@ -36,7 +36,7 @@ const LocationPage: React.FC = () => {
               {[{ value: '45KM', label: t('location.stats.airport') }, { value: '144', label: t('location.stats.acres') }, { value: '3', label: t('location.stats.continents') }].map((s, i) => (
                 <div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/50">{s.label}</p></div>
               ))}
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
         <section className="container mx-auto px-6 py-16">
@@ -52,7 +52,7 @@ const LocationPage: React.FC = () => {
               title={`${t('misc.capitalMed')} Location`}
               className="w-full h-[350px] md:h-[500px]"
             />
-          </PageLayout>
+          </motion.div>
           {/* CapitalMed Location Info */}
           <div className="max-w-4xl mx-auto mb-4">
             <div className="flex items-center justify-center gap-3 bg-primary/10 border-2 border-primary/30 rounded-xl px-6 py-5 shadow-sm">
@@ -78,7 +78,7 @@ const LocationPage: React.FC = () => {
                 <p className="flex items-center gap-2"><Phone className="w-3.5 h-3.5" /><strong>{t('location.contact.international')}</strong> +20 (02) 2123 4567</p>
                 <p className="flex items-center gap-2"><Mail className="w-3.5 h-3.5" />info@capitalmed.com.eg</p>
               </div>
-            </PageLayout>
+            </motion.div>
             <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="premium-card p-6">
               <h3 className="font-semibold text-sm mb-3">{t('location.hours.title')}</h3>
               <div className="space-y-2 text-xs text-muted-foreground">
@@ -86,21 +86,21 @@ const LocationPage: React.FC = () => {
                 <p className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" />{t('location.hours.weekend')}</p>
                 <p className="flex items-center gap-2 text-secondary font-medium"><Clock className="w-3.5 h-3.5" />{t('location.hours.emergency')}</p>
               </div>
-            </PageLayout>
+            </motion.div>
           </div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('location.getting.title')}</h2>
             <p className="section-subtitle">{t('location.getting.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
             {transport.map((item, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
                 <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="section-title text-center mb-10">{t('location.landmarks.title')}</motion.h2>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
@@ -109,14 +109,14 @@ const LocationPage: React.FC = () => {
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -2 }} className="premium-card p-4 flex items-center gap-4">
                 <span className="text-xl font-bold text-primary">{l.distance}</span>
                 <span className="text-sm">{l.name}</span>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
           {/* Aerial Image */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="rounded-xl overflow-hidden mb-10 max-w-4xl mx-auto">
             <img src={campusAerial} alt="CapitalMed Campus" className="w-full h-[300px] md:h-[400px] object-cover" />
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="bg-primary/5 border border-primary/15 rounded-xl p-10 text-center">
@@ -126,7 +126,7 @@ const LocationPage: React.FC = () => {
               <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">{t('location.cta.schedule')}</Button></Link>
               <Link to="/medical-tourism" className="w-full sm:w-auto"><Button size="lg" variant="outline" className="rounded-[8px] w-full sm:w-auto">{t('location.cta.tourism')}</Button></Link>
             </div>
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

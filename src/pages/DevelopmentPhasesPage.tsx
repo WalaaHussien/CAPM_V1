@@ -31,7 +31,7 @@ const DevelopmentPhasesPage: React.FC = () => {
               <p className="text-secondary text-sm font-medium mb-1">70%</p>
               <Progress value={70} className="max-w-xs mx-auto mb-1" />
               <p className="text-xs text-white/50">{t('dev.hero.progress')}</p>
-            </PageLayout>
+            </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold text-white mb-4">{t('dev.hero.title')}</motion.h1>
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
@@ -39,7 +39,7 @@ const DevelopmentPhasesPage: React.FC = () => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
               className="flex justify-center gap-8 flex-wrap">
               {stats.map((s, i) => (<div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/50">{s.label}</p></div>))}
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
         <section className="container mx-auto px-6 py-20">
@@ -60,7 +60,7 @@ const DevelopmentPhasesPage: React.FC = () => {
                   <p className="text-muted-foreground text-sm mb-3">{phase.desc}</p>
                   <ul className="grid grid-cols-2 gap-2">{phase.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2">{phase.statusType === 'completed' ? <CheckCircle2 className="w-3.5 h-3.5 text-secondary" /> : <Clock className="w-3.5 h-3.5 text-muted-foreground" />}{item}</li>))}</ul>
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -71,9 +71,9 @@ const DevelopmentPhasesPage: React.FC = () => {
                 <Calendar className="w-5 h-5 text-primary mx-auto mb-2" />
                 <p className="text-xl font-bold text-primary">{m.year}</p>
                 <p className="text-xs text-muted-foreground">{m.event}</p>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

@@ -47,7 +47,7 @@ const AboutPage: React.FC = () => {
               <h2 className="section-title mb-5">{t('about.story.title')}</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">{t('about.story.p1')}</p>
               <p className="text-muted-foreground leading-relaxed">{t('about.story.p2')}</p>
-            </PageLayout>
+            </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <div className="rounded-xl overflow-hidden">
                 <img src={hospitalPhase1} alt="CapitalMed" className="w-full h-[400px] object-cover" />
@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
                 <span className="text-2xl font-bold block">6+</span>
                 <span className="text-xs text-accent-foreground/70">{t('about.years')}</span>
               </div>
-            </PageLayout>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.text}</p>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('about.values.title')}</h2>
             <p className="section-subtitle">{t('about.values.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((value) => (
               <motion.div key={value.key} variants={fadeUp} whileHover={{ y: -3 }}
@@ -97,9 +97,9 @@ const AboutPage: React.FC = () => {
                   <value.icon className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-semibold">{t(value.key)}</h3>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </div>
       </section>
 
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('about.timeline.title')}</h2>
-          </PageLayout>
+          </motion.div>
           <div className="max-w-2xl mx-auto space-y-6">
             {milestones.map((milestone, index) => (
               <motion.div key={milestone.year} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
@@ -123,7 +123,7 @@ const AboutPage: React.FC = () => {
                   <span className="text-accent text-sm font-bold">{milestone.year}</span>
                   <p className="text-muted-foreground text-sm mt-1">{t(milestone.key)}</p>
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -134,7 +134,7 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('about.keyFacts.title')}</h2>
-          </PageLayout>
+          </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { icon: Building2, value: '577,000 m²', label: t('about.keyFacts.landArea') },
@@ -149,7 +149,7 @@ const AboutPage: React.FC = () => {
                 <fact.icon className="w-6 h-6 text-primary mx-auto mb-3" />
                 <div className="text-2xl font-bold text-primary mb-1">{fact.value}</div>
                 <div className="text-muted-foreground text-sm">{fact.label}</div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -161,7 +161,7 @@ const AboutPage: React.FC = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('about.corporate.title')}</h2>
             <p className="section-subtitle">{t('about.corporate.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: Landmark, name: t('about.corporate.elkalaa'), desc: t('about.corporate.elkalaa.desc') },
@@ -174,7 +174,7 @@ const AboutPage: React.FC = () => {
                 <entity.icon className="w-8 h-8 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{entity.name}</h3>
                 <p className="text-xs text-muted-foreground">{entity.desc}</p>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -195,9 +195,9 @@ const AboutPage: React.FC = () => {
                 <stat.icon className="w-6 h-6 text-primary mx-auto mb-3" />
                 <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
                 <div className="text-muted-foreground text-sm">{stat.label}</div>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </div>
       </section>
 

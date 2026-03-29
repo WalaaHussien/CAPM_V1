@@ -122,7 +122,7 @@ const MedicalTourismPage: React.FC = () => {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 mb-6 mt-8">
               <Sparkles className="w-4 h-4 text-accent" />
               <span className="text-white/80 text-sm font-medium">{t('tourism.badge.icm')}</span>
-            </PageLayout>
+            </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.08]">
               {t('tourism.hero.main.title')}<br /><span className="bg-gradient-to-r from-secondary via-white to-accent bg-clip-text text-transparent">{t('tourism.hero.main.subtitle')}</span>
@@ -139,7 +139,7 @@ const MedicalTourismPage: React.FC = () => {
               <span className="flex items-center text-white/80 text-sm font-medium">
                 <Clock className="w-4 h-4 mr-2 text-accent" />{t('tourism.cta.estimate')}
               </span>
-            </PageLayout>
+            </motion.div>
             {/* Floating stat badges */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
               className="flex flex-wrap justify-center gap-4">
@@ -149,10 +149,10 @@ const MedicalTourismPage: React.FC = () => {
                   className="flex items-center gap-2 bg-white/5 backdrop-blur border border-white/10 rounded-full px-4 py-2">
                   <badge.icon className="w-4 h-4 text-secondary" />
                   <span className="text-white/70 text-sm">{badge.label}</span>
-                </PageLayout>
+                </motion.div>
               ))}
-            </PageLayout>
-          </PageLayout>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* I. Strategic Positioning - Alternating layout */}
@@ -161,7 +161,7 @@ const MedicalTourismPage: React.FC = () => {
             <Badge variant="outline" className="mb-3 text-secondary border-secondary/30">{t('tourism.section1.badge')}</Badge>
             <h2 className="section-title text-3xl md:text-4xl">{t('tourism.section1.title')}</h2>
             <p className="section-subtitle">{t('tourism.section1.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <div className="space-y-16 max-w-5xl mx-auto">
             {[
               { icon: Shield, title: t('tourism.pillar.governance'), desc: t('tourism.pillar.governance.desc'), align: 'left' },
@@ -172,12 +172,12 @@ const MedicalTourismPage: React.FC = () => {
                 className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}>
                 <motion.div whileHover={{ scale: 1.05, rotate: 2 }} className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/15 to-secondary/10 flex items-center justify-center shrink-0 shadow-lg">
                   <item.icon className="w-10 h-10 text-primary" />
-                </PageLayout>
+                </motion.div>
                 <div className={`${i % 2 === 0 ? 'text-left' : 'md:text-right'}`}>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -193,7 +193,7 @@ const MedicalTourismPage: React.FC = () => {
               <Badge variant="outline" className="mb-3 text-secondary border-secondary/30">{t('tourism.section2.badge')}</Badge>
               <h2 className="section-title text-3xl md:text-4xl">{t('tourism.section2.title')}</h2>
               <p className="section-subtitle">{t('tourism.section2.subtitle')}</p>
-            </PageLayout>
+            </motion.div>
             {/* Top row: 3 cards, Bottom row: 4 cards for visual interest */}
             {/* Tier Slider */}
             {(() => {
@@ -251,7 +251,7 @@ const MedicalTourismPage: React.FC = () => {
                           {tier.cta} <ChevronRight className="w-4 h-4 ml-1" />
                         </Button>
                       </div>
-                    </PageLayout>
+                    </motion.div>
                   </AnimatePresence>
                 </div>
               );
@@ -265,7 +265,7 @@ const MedicalTourismPage: React.FC = () => {
             <Badge variant="outline" className="mb-3 text-secondary border-secondary/30">{t('tourism.section3.badge')}</Badge>
             <h2 className="section-title text-3xl md:text-4xl">{t('tourism.section3.title')}</h2>
             <p className="section-subtitle">{t('tourism.section3.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <div className="relative max-w-5xl mx-auto">
             {/* Vertical connector line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" />
@@ -297,7 +297,7 @@ const MedicalTourismPage: React.FC = () => {
                           </motion.li>
                         ))}
                       </ul>
-                    </PageLayout>
+                    </motion.div>
                   </div>
                   {/* Center circle */}
                   <div className={`hidden md:flex ${i % 2 === 0 ? 'md:order-2' : ''} justify-center`}>
@@ -307,9 +307,9 @@ const MedicalTourismPage: React.FC = () => {
                       className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center text-lg font-bold shadow-lg shadow-primary/30 relative z-10"
                     >
                       {phase.num}
-                    </PageLayout>
+                    </motion.div>
                   </div>
-                </PageLayout>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -328,7 +328,7 @@ const MedicalTourismPage: React.FC = () => {
               <Badge variant="outline" className="mb-3 text-secondary border-secondary/30 bg-white/5">{t('tourism.section4.badge')}</Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-white">{t('tourism.section4.title')}</h2>
               <p className="text-white/50 max-w-xl mx-auto mt-3">{t('tourism.section4.subtitle')}</p>
-            </PageLayout>
+            </motion.div>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {differentiation.map((item, i) => (
@@ -338,7 +338,7 @@ const MedicalTourismPage: React.FC = () => {
                   <div className="flex items-start gap-4">
                     <motion.div whileHover={{ rotate: 10 }} className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary/20 to-primary/10 flex items-center justify-center shrink-0">
                       <item.icon className="w-6 h-6 text-secondary" />
-                    </PageLayout>
+                    </motion.div>
                     <div>
                       <h3 className="font-bold text-white mb-1">{item.title}</h3>
                       <p className="text-white/50 text-sm mb-3">{item.desc}</p>
@@ -352,9 +352,9 @@ const MedicalTourismPage: React.FC = () => {
                       </ul>
                     </div>
                   </div>
-                </PageLayout>
+                </motion.div>
               ))}
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
 
@@ -364,7 +364,7 @@ const MedicalTourismPage: React.FC = () => {
             <Badge variant="outline" className="mb-3 text-accent border-accent/30">{t('tourism.section5.badge')}</Badge>
             <h2 className="section-title text-3xl md:text-4xl">{t('tourism.section5.title')}</h2>
             <p className="section-subtitle">{t('tourism.section5.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
@@ -380,13 +380,13 @@ const MedicalTourismPage: React.FC = () => {
                   <motion.div whileHover={{ rotate: 15, scale: 1.1 }}
                     className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/5 flex items-center justify-center mx-auto mb-4">
                     <item.icon className={`w-6 h-6 ${item.color}`} />
-                  </PageLayout>
+                  </motion.div>
                   <h3 className="font-bold mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm">{item.desc}</p>
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </section>
 
         {/* VI. Technology & Infrastructure - Futuristic cards */}
@@ -396,7 +396,7 @@ const MedicalTourismPage: React.FC = () => {
               <Badge variant="outline" className="mb-3 text-secondary border-secondary/30">{t('tourism.section6.badge')}</Badge>
               <h2 className="section-title text-3xl md:text-4xl">{t('tourism.section6.title')}</h2>
               <p className="section-subtitle">{t('tourism.section6.subtitle')}</p>
-            </PageLayout>
+            </motion.div>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {tech.map((item, i) => (
@@ -407,12 +407,12 @@ const MedicalTourismPage: React.FC = () => {
                   <motion.div whileHover={{ y: -5, rotate: 5 }}
                     className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/5 flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-shadow duration-300">
                     <item.icon className="w-7 h-7 text-primary" />
-                  </PageLayout>
+                  </motion.div>
                   <h3 className="font-bold mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </PageLayout>
+                </motion.div>
               ))}
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
 
@@ -421,7 +421,7 @@ const MedicalTourismPage: React.FC = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
             <Badge variant="outline" className="mb-3 text-secondary border-secondary/30">{t('tourism.section7.badge')}</Badge>
             <h2 className="section-title text-3xl md:text-4xl">{t('tourism.section7.title')}</h2>
-          </PageLayout>
+          </motion.div>
           <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {[
               { icon: Brain, label: language === 'ar' ? 'سريرياً' : 'Clinical', value: `<${complication}%`, sub: language === 'ar' ? 'معدل المضاعفات' : 'Complication Rate', color: 'text-primary', bg: 'from-primary/10 to-primary/5' },
@@ -439,7 +439,7 @@ const MedicalTourismPage: React.FC = () => {
                   <p className={`text-4xl font-bold ${kpi.color}`}>{kpi.value}</p>
                   <p className="text-xs text-muted-foreground mt-1">{kpi.sub}</p>
                 </div>
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -458,7 +458,7 @@ const MedicalTourismPage: React.FC = () => {
               <div className="relative z-10">
                 <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ type: 'spring', delay: 0.2 }}>
                   <Award className="w-12 h-12 text-accent mx-auto mb-6" />
-                </PageLayout>
+                </motion.div>
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
                   {t('tourism.cta.final.title')}<br />{t('tourism.cta.final.subtitle')}
                 </h2>
@@ -474,7 +474,7 @@ const MedicalTourismPage: React.FC = () => {
                   </Button>
                 </div>
               </div>
-            </PageLayout>
+            </motion.div>
           </div>
         </section>
       </main>

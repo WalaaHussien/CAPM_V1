@@ -53,7 +53,7 @@ const FacilitiesPage: React.FC = () => {
             <p className="section-label">{t('facilities.institutes.label')}</p>
             <h2 className="section-title">{t('facilities.institutes.title')}</h2>
             <p className="section-subtitle">{t('facilities.institutes.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20">
             {[
@@ -88,14 +88,14 @@ const FacilitiesPage: React.FC = () => {
                 <inst.icon className="w-6 h-6 text-accent mb-3" />
                 <h3 className="font-semibold text-sm mb-1">{t(`facilities.inst.${inst.key}`)}</h3>
                 <p className="text-xs text-muted-foreground">{t(`facilities.inst.${inst.key}.desc`)}</p>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="rounded-xl overflow-hidden shadow-lg mb-16">
             <img src={capitalmedHotel} alt="CapitalMed Hotel" className="w-full h-[300px] md:h-[400px] object-cover" />
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="premium-card overflow-hidden p-0 mb-16">
@@ -111,24 +111,24 @@ const FacilitiesPage: React.FC = () => {
                       className="bg-muted/50 rounded-lg p-4">
                       <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
                       <p className="text-xs text-muted-foreground">{item.desc}</p>
-                    </PageLayout>
+                    </motion.div>
                   ))}
                 </div>
               </div>
             </div>
-          </PageLayout>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-5 mb-16">
             <motion.div initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="rounded-xl overflow-hidden"><img src={rehabCenter} alt="Rehabilitation" className="w-full h-[260px] object-cover" /></PageLayout>
+              className="rounded-xl overflow-hidden"><img src={rehabCenter} alt="Rehabilitation" className="w-full h-[260px] object-cover" /></motion.div>
             <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="rounded-xl overflow-hidden"><img src={commercialMall} alt="Commercial" className="w-full h-[260px] object-cover" /></PageLayout>
+              className="rounded-xl overflow-hidden"><img src={commercialMall} alt="Commercial" className="w-full h-[260px] object-cover" /></motion.div>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('facilities.retail.title')}</h2>
             <p className="section-subtitle">{t('facilities.retail.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-3 gap-5 mb-20">
             {amenities.map((cat, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
@@ -141,23 +141,23 @@ const FacilitiesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('facilities.support.title')}</h2>
             <p className="section-subtitle">{t('facilities.support.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {support.map((item, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
                 <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

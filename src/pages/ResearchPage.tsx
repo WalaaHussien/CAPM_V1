@@ -44,11 +44,11 @@ const ResearchPage: React.FC = () => {
             <h2 className="section-title mb-4">{t('research.vision.title')}</h2>
             <p className="text-muted-foreground leading-relaxed mb-3">{t('research.vision.p1')}</p>
             <p className="text-muted-foreground leading-relaxed">{t('research.vision.p2')}</p>
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('research.areas.title')}</h2>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
             {researchAreas.map((area, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
@@ -56,23 +56,23 @@ const ResearchPage: React.FC = () => {
                 <h3 className="font-semibold mb-2">{area.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{area.desc}</p>
                 <Badge variant="outline" className="text-xs">{t('research.planned')}</Badge>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-4">
             <h2 className="section-title">{t('research.ecosystem.title')}</h2>
             <p className="section-subtitle">{t('research.ecosystem.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
             {ecosystem.map((item, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
                 <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
-              </PageLayout>
+              </motion.div>
             ))}
-          </PageLayout>
+          </motion.div>
         </section>
       </main>
     </PageLayout>

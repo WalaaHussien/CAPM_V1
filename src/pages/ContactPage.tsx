@@ -58,7 +58,7 @@ const ContactPage: React.FC = () => {
                 ) : (
                   <p className="text-muted-foreground text-xs">{t(info.content)}</p>
                 )}
-              </PageLayout>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -103,7 +103,7 @@ const ContactPage: React.FC = () => {
                   {t('contact.form.submit')}
                 </Button>
               </form>
-            </PageLayout>
+            </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               className="rounded-xl overflow-hidden min-h-[400px] relative">
               <iframe
@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
                 width="100%" height="100%" style={{ border: 0, minHeight: '400px' }} allowFullScreen loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade" title="CapitalMed Location"
               />
-            </PageLayout>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -122,7 +122,7 @@ const ContactPage: React.FC = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('contact.faq.title')}</h2>
             <p className="section-subtitle">{t('contact.faq.subtitle')}</p>
-          </PageLayout>
+          </motion.div>
           <div className="max-w-2xl mx-auto">
             <Accordion type="single" collapsible className="space-y-2">
               {[1, 2, 3, 4].map((faq) => (
