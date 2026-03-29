@@ -24,6 +24,7 @@ import DevelopmentPhasesPage from "./pages/DevelopmentPhasesPage";
 import LocationPage from "./pages/LocationPage";
 import FAQPage from "./pages/FAQPage";
 import CampusMapPage from "./pages/CampusMapPage";
+import HealthcarePage from "./pages/HealthcarePage";
 import PatientPortalPage from "./pages/PatientPortalPage";
 import NotFound from "./pages/NotFound";
 import Chatbot from "@/components/Chatbot";
