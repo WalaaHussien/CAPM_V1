@@ -4,8 +4,6 @@ import {
   CalendarCheck, FileText, Pill, Activity, MessageSquare,
   CreditCard, Clock, Shield, ArrowRight, User
 } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -35,7 +33,7 @@ const PatientPortalPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+      
 
       {/* Hero */}
       <section className="page-hero">
@@ -128,7 +126,7 @@ const PatientPortalPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      
     </motion.div>
   );
 };

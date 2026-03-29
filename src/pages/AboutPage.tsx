@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Award, Users, Building2, Stethoscope, ShieldCheck } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import hospitalPhase1 from '@/assets/campus-aerial-day2.jpeg';
 
@@ -28,7 +26,7 @@ const AboutPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+      
 
       <section className="page-hero">
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -152,7 +150,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      
     </motion.div>
   );
 };

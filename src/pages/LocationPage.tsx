@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Plane, Car, Train, Bus, Phone, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import campusAerial from '@/assets/location-campus.jpeg';
@@ -23,7 +21,7 @@ const LocationPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+      
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -131,7 +129,7 @@ const LocationPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
+      
     </motion.div>
   );
 };

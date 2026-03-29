@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FlaskConical, Brain, Heart, Dna, Bug, Leaf, Cpu, BookOpen, Users } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -28,7 +26,7 @@ const ResearchPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+      
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -77,7 +75,7 @@ const ResearchPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
+      
     </motion.div>
   );
 };
