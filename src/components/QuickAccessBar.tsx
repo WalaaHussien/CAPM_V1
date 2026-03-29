@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Stethoscope, CalendarCheck, Siren, Phone } from 'lucide-react';
+import { HeartPulse, Stethoscope, CalendarCheck, Siren, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -8,7 +8,7 @@ const QuickAccessBar: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
   const actions = [
-    { icon: Stethoscope, label: t('quick.bar.patients'), href: '/patient-portal', color: 'bg-white/20 hover:bg-white/30 text-white' },
+    { icon: HeartPulse, label: t('quick.bar.patients'), href: '/patient-portal', color: 'bg-white/20 hover:bg-white/30 text-white' },
     { icon: Stethoscope, label: t('quick.bar.doctors'), href: '/doctors', color: 'bg-white/20 hover:bg-white/30 text-white' },
     { icon: CalendarCheck, label: t('quick.bar.bookNow'), href: '/contact', color: 'bg-accent hover:bg-accent/90 text-accent-foreground' },
     { icon: Siren, label: t('quick.bar.emergency'), href: 'tel:16999', color: 'bg-destructive hover:bg-destructive/90 text-destructive-foreground', isExternal: true },
