@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Building2, Plane, FlaskConical, Handshake, Layers, TrendingUp,
-  Shield, Newspaper, Briefcase, MapPin, HelpCircle, User
+  Shield, Newspaper, Briefcase, MapPin, HelpCircle, User, HeartPulse
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
