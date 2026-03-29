@@ -21,9 +21,11 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) 
         <QuickAccessBar />
       </div>
       <div className="pt-12">
-        <Header />
+        <div className="sticky top-12 z-50 pt-2 pb-3 md:pt-3 md:pb-4">
+          <Header />
+        </div>
       </div>
-      <main>{children}</main>
+      <main className="relative z-0">{children}</main>
       {showFooter && <Footer />}
     </motion.div>
   );
