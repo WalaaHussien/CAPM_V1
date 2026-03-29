@@ -135,10 +135,10 @@ const Hero: React.FC = () => {
             className="flex flex-wrap gap-5 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10"
           >
             {[
-              { value: '577K m²', label: 'Campus Area' },
-              { value: '$1.2B', label: 'Investment' },
-              { value: '4,000+', label: 'Hospital Beds' },
-              { value: '15,000+', label: 'Healthcare Providers' },
+              { value: t('hero.stats.area'), label: t('hero.stat.campusArea') },
+              { value: t('hero.stats.investment'), label: t('hero.stat.investment') },
+              { value: '4,000+', label: t('stats.beds') },
+              { value: '15,000+', label: t('stats.providers') },
             ].map((stat, i) => (
               <motion.div
                 key={i}

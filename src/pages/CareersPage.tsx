@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MapPin, Clock, Briefcase, Filter } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -51,8 +50,7 @@ const CareersPage: React.FC = () => {
   });
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -129,8 +127,7 @@ const CareersPage: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

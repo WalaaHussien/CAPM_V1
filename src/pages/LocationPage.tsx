@@ -2,8 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Plane, Car, Train, Bus, Phone, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import campusAerial from '@/assets/location-campus.jpeg';
@@ -22,8 +21,7 @@ const LocationPage: React.FC = () => {
   const landmarks = language === 'ar' ? [{ distance: '٣٥ كم', name: 'مطار القاهرة الدولي' }, { distance: '٤٥ كم', name: 'وسط القاهرة' }, { distance: '٦٠ كم', name: 'أهرامات الجيزة' }, { distance: '٢٥ كم', name: 'العاصمة الإدارية' }, { distance: '٢ كم', name: 'جامعة بدر' }, { distance: '٥ كم', name: 'طريق القاهرة-السويس' }] : [{ distance: '35 km', name: 'Cairo International Airport' }, { distance: '45 km', name: 'Downtown Cairo' }, { distance: '60 km', name: 'Giza Pyramids' }, { distance: '25 km', name: 'New Administrative Capital' }, { distance: '2 km', name: 'Badr University' }, { distance: '5 km', name: 'Cairo-Suez Highway' }];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -131,8 +129,7 @@ const LocationPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

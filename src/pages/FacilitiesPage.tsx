@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Hotel, ShoppingBag, UtensilsCrossed, Car, Wifi, Coffee, Flower2, Building2, Heart, Brain, Baby, Bone, Ribbon, FlaskConical, Syringe, Stethoscope, Eye, Ear, Activity, Cpu, Users, GraduationCap, Monitor, Store, Wrench, Expand } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import capitalmedHotel from '@/assets/campus-img-10.jpeg';
 import rehabCenter from '@/assets/rehab-gym.jpeg';
@@ -35,8 +34,7 @@ const FacilitiesPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -162,8 +160,7 @@ const FacilitiesPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

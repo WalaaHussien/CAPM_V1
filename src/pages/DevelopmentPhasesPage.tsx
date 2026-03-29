@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Clock, Calendar } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -24,8 +23,7 @@ const DevelopmentPhasesPage: React.FC = () => {
   const milestones = language === 'ar' ? [{ year: '٢٠٢٢', event: 'وضع حجر الأساس' }, { year: '٢٠٢٤', event: 'اكتمال المرحلة الأولى' }, { year: '٢٠٢٥', event: 'استقبال أول المرضى' }, { year: '٢٠٢٧', event: 'اكتمال المرحلة الثانية' }, { year: '٢٠٣٠', event: 'تشغيل المدينة بالكامل' }] : [{ year: '2022', event: 'Project Groundbreaking' }, { year: '2024', event: 'Phase 1 Completion' }, { year: '2025', event: 'First Patients Admitted' }, { year: '2027', event: 'Phase 2 Completion' }, { year: '2030', event: 'Full City Operational' }];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -78,8 +76,7 @@ const DevelopmentPhasesPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

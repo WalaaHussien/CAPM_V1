@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import Header from '@/components/Header';
+import PageLayout from '@/components/PageLayout';
 
 /* ─── Types ─── */
 type BuildingType = 'hospital' | 'emergency' | 'research' | 'wellness' | 'hotel' | 'commercial' | 'admin';
@@ -548,8 +548,7 @@ const CampusMapPage: React.FC = () => {
   const totalProgress = totalSegments > 0 ? (currentSegment + segmentProgress) / totalSegments : 0;
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <Header />
+    <PageLayout showFooter={false}>
       <div className="relative h-screen pt-16">
         {/* ─── 3D Canvas ─── */}
         <Canvas shadows camera={{ position: [0, 60, 80], fov: 45 }} className="absolute inset-0"
@@ -808,7 +807,7 @@ const CampusMapPage: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 export default CampusMapPage;

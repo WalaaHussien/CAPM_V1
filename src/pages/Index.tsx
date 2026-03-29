@@ -1,7 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import QuickAccessBar from '@/components/QuickAccessBar';
-import Header from '@/components/Header';
+import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
 import Services from '@/components/Services';
@@ -9,29 +7,18 @@ import About from '@/components/About';
 import Pillars from '@/components/Pillars';
 import HotlineBar from '@/components/HotlineBar';
 import SuccessStories from '@/components/SuccessStories';
-import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-background"
-    >
-      <QuickAccessBar />
-      <Header />
-      <main>
-        <Hero />
-        <Pillars />
-        <Stats />
-        <Services />
-        <HotlineBar />
-        <About />
-        <SuccessStories />
-      </main>
-      <Footer />
-    </motion.div>
+    <PageLayout>
+      <Hero />
+      <Pillars />
+      <Stats />
+      <Services />
+      <HotlineBar />
+      <About />
+      <SuccessStories />
+    </PageLayout>
   );
 };
 

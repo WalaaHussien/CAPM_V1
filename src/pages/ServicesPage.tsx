@@ -5,8 +5,7 @@ import {
   Pill, Syringe, Activity, Microscope, Ribbon, Ear,
   ArrowRight, AlertTriangle
 } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -41,8 +40,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
 
       {/* Hero with staggered animations */}
       <section className="page-hero">
@@ -146,8 +144,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 
