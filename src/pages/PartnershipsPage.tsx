@@ -20,14 +20,11 @@ const partners = [
 ];
 
 const brandEntities = [
-  { name: 'ElKalaa Ventures', desc: 'A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla', logo: '/images/brands/elkalaa-ventures.png' },
-  { name: 'Egyptian Society for Quality in Health Care (ESQ)', desc: 'Promoting quality standards in Egyptian healthcare', logo: '/images/brands/esq.jpg' },
-  { name: 'Futures Foundation', desc: 'Foundation for Education Training and Development', logo: '/images/brands/futures.jpg' },
-  { name: 'GS1 Egypt', desc: 'Global standards for business communication', logo: '/images/brands/gs1.png' },
-  { name: 'BUC — Badr University in Cairo', desc: 'Premier university offering medical and healthcare education', logo: '/images/brands/buc.jpg' },
-  { name: 'CIRA', desc: 'Cairo for Investment and Real Estate Development S.A.E.', logo: '/images/brands/cira.png' },
-  { name: 'EHCS', desc: 'Egyptians for Health Care Services — The company that owns CAPITALMED', logo: '/images/brands/ehcs.jpg' },
-  { name: 'CAPITALMED', desc: 'The Capital of Medicine in the Middle East — Healthcare City', logo: '/images/brands/capitalmed.png' },
+  { name: 'ElKalaa Ventures', desc: 'A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla', icon: Building2 },
+  { name: 'BUC — Badr University in Cairo', desc: 'Premier university offering medical and healthcare education', icon: GraduationCap },
+  { name: 'CIRA', desc: 'Cairo for Investment and Real Estate Development S.A.E.', icon: Building2 },
+  { name: 'EHCS', desc: 'Egyptians for Health Care Services — The company that owns CAPITALMED', icon: Stethoscope },
+  { name: 'CAPITALMED', desc: 'The Capital of Medicine in the Middle East — Healthcare City', icon: Stethoscope },
 ];
 
 const PartnershipsPage: React.FC = () => {
