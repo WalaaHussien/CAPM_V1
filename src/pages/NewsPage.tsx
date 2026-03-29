@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, User, ArrowRight, ChevronDown, X } from 'lucide-react';
@@ -92,7 +91,6 @@ const NewsPage: React.FC = () => {
               className="text-lg text-white/60">{t('news.hero.subtitle')}</motion.p>
           </div>
         </section>
-      <QuickAccessBar />
         <section className="container mx-auto px-6 py-10">
           <div className="flex flex-wrap gap-2 justify-center mb-10">
             {categories.map(cat => (

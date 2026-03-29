@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Award, Users, Building2, Stethoscope, ShieldCheck } from 'lucide-react';
@@ -39,7 +38,6 @@ const AboutPage: React.FC = () => {
             className="text-lg text-white/60 max-w-2xl mx-auto">{t('about.page.subtitle')}</motion.p>
         </div>
       </section>
-      <QuickAccessBar />
 
       {/* Story */}
       <section className="py-20">

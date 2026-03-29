@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MessageCircle, Phone, ArrowRight } from 'lucide-react';
@@ -50,7 +49,6 @@ const FAQPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      <QuickAccessBar />
         <section className="container mx-auto px-6 py-20 max-w-2xl">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-xl font-bold mb-6">{t('faq.top.title')}</motion.h2>

@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -54,7 +53,6 @@ const ServicesPage: React.FC = () => {
             className="text-lg text-white/60 max-w-2xl mx-auto">{t('services.page.subtitle')}</motion.p>
         </div>
       </section>
-      <QuickAccessBar />
 
       {/* Services Grid with stagger */}
       <section className="py-20">

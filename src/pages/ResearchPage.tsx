@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FlaskConical, Brain, Heart, Dna, Bug, Leaf, Cpu, BookOpen, Users } from 'lucide-react';
@@ -39,7 +38,6 @@ const ResearchPage: React.FC = () => {
               className="text-lg text-white/60 max-w-2xl mx-auto">{t('research.hero.subtitle')}</motion.p>
           </div>
         </section>
-      <QuickAccessBar />
 
         <section className="container mx-auto px-6 py-20">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="premium-card p-8 md:p-10 mb-20">

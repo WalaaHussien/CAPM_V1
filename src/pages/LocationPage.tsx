@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Plane, Car, Train, Bus, Phone, Mail, Clock } from 'lucide-react';
@@ -40,7 +39,6 @@ const LocationPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      <QuickAccessBar />
         <section className="container mx-auto px-6 py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="relative rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto mb-4 bg-muted/20">

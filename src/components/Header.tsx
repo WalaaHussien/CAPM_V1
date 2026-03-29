@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Menu, ChevronDown, Globe, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import darkLogo from '@/assets/dark_logo.svg';
+
 import lightLogo from '@/assets/light_logo.svg';
 import { Button } from '@/components/ui/button';
 import {
@@ -48,25 +48,22 @@ const Header: React.FC = () => {
     megaMenuTimeout.current = setTimeout(() => setIsMegaMenuOpen(false), 200);
   };
 
-  const textColor = isScrolled ? 'text-foreground' : 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]';
-  const hoverColor = isScrolled ? 'hover:text-primary' : 'hover:text-white/70';
+  const textColor = 'text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]';
+  const hoverColor = 'hover:text-white/70';
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-lg shadow-sm border-b border-border/50'
-          : 'bg-transparent'
-      }`}
+      className="sticky top-0 left-0 right-0 z-50 transition-all duration-500"
+      style={{ background: 'linear-gradient(135deg, hsl(200 90% 24%) 0%, hsl(200 85% 16%) 100%)' }}
     >
       {/* Top Bar */}
-      <div className={`hidden md:block transition-colors duration-300 ${isScrolled ? 'border-b border-border/30' : 'border-b border-white/10'}`}>
+      <div className="hidden md:block border-b border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-9 text-xs">
-            <div className={`flex items-center gap-4 ${isScrolled ? 'text-muted-foreground' : 'text-white/70'}`}>
+            <div className="flex items-center gap-4 text-white/70">
               <a href="tel:+201234567890" className="flex items-center gap-1.5 hover:text-accent transition-colors">
                 <Phone className="w-3 h-3" />
                 <span>+20 2 1234 5678</span>
@@ -99,12 +96,7 @@ const Header: React.FC = () => {
             <img
               src={lightLogo}
               alt="CapitalMed"
-              className={`h-full w-auto object-contain transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
-            />
-            <img
-              src={darkLogo}
-              alt="CapitalMed"
-              className={`h-full w-auto object-contain absolute left-0 top-0 transition-opacity duration-500 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
+              className="h-full w-auto object-contain"
             />
           </Link>
 

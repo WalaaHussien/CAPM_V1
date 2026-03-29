@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Hotel, ShoppingBag, UtensilsCrossed, Car, Wifi, Coffee, Flower2 } from 'lucide-react';
@@ -47,7 +46,6 @@ const FacilitiesPage: React.FC = () => {
               className="text-lg text-white/60 max-w-2xl mx-auto">{t('facilities.hero.subtitle')}</motion.p>
           </div>
         </section>
-      <QuickAccessBar />
 
         <section className="container mx-auto px-6 py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}

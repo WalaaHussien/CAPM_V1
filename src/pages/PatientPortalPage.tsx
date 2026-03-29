@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -47,7 +46,6 @@ const PatientPortalPage: React.FC = () => {
             className="text-lg text-white/60 max-w-2xl mx-auto">{t('portal.subtitle')}</motion.p>
         </div>
       </section>
-      <QuickAccessBar />
 
       {/* Login/Register CTA */}
       <section className="py-10 -mt-8 relative z-10">

@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Clock, Calendar } from 'lucide-react';
@@ -43,7 +42,6 @@ const DevelopmentPhasesPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      <QuickAccessBar />
         <section className="container mx-auto px-6 py-20">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="section-title text-center mb-12">{t('dev.phases.title')}</motion.h2>

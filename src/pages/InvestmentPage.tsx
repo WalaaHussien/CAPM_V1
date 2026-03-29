@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Stethoscope, FlaskConical, Cpu, MonitorCheck } from 'lucide-react';
@@ -42,7 +41,6 @@ const InvestmentPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      <QuickAccessBar />
         <section className="container mx-auto px-4 md:px-6 py-10 md:py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="rounded-xl overflow-hidden shadow-lg max-w-3xl mx-auto mb-20">

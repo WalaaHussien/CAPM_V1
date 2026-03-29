@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Star, Calendar, Phone, Stethoscope } from 'lucide-react';
@@ -110,7 +109,6 @@ const DoctorsPage: React.FC = () => {
             className="text-lg text-white/60 max-w-2xl mx-auto">{t('doctors.page.subtitle')}</motion.p>
         </div>
       </section>
-      <QuickAccessBar />
 
       {/* Search & Filters */}
       <section className="py-6 bg-card border-b border-border">

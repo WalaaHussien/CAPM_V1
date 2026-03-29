@@ -1,4 +1,3 @@
-import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState, useEffect, useRef, useCallback, useMemo, Suspense } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
@@ -549,7 +548,6 @@ const CampusMapPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
-      <QuickAccessBar />
       <div className="relative h-screen pt-16">
         {/* ─── 3D Canvas ─── */}
         <Canvas shadows camera={{ position: [0, 60, 80], fov: 45 }} className="absolute inset-0"
