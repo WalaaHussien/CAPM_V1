@@ -231,14 +231,14 @@ const Chatbot: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex items-end gap-2 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}
                 >
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${msg.sender === 'bot' ? 'bg-primary/10' : 'bg-secondary/10'
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${msg.sender === 'bot' ? 'bg-primary/10' : 'bg-primary/10'
                     }`}>
-                    {msg.sender === 'bot' ? <Bot className="w-4 h-4 text-primary" /> : <User className="w-4 h-4 text-secondary" />}
+                    {msg.sender === 'bot' ? <Bot className="w-4 h-4 text-primary" /> : <User className="w-4 h-4 text-primary" />}
                   </div>
                   <div className={`flex flex-col max-w-[75%] ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}>
                     <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${msg.sender === 'user'
-                        ? 'bg-primary text-primary-foreground rounded-br-sm'
-                        : 'bg-muted text-foreground rounded-bl-sm'
+                      ? 'bg-primary text-primary-foreground rounded-br-sm'
+                      : 'bg-muted text-foreground rounded-bl-sm'
                       }`}>
                       {msg.text}
                     </div>

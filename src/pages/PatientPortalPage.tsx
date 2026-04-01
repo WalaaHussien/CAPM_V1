@@ -205,11 +205,11 @@ const PatientPortalPage: React.FC = () => {
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('portal.label')}</motion.p>
+              className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('portal.label')}</motion.p>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold text-white mb-4">{t('portal.title')}</motion.h1>
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-white/60 max-w-2xl mx-auto">{t('portal.subtitle')}</motion.p>
+              className="text-lg text-white/90 max-w-2xl mx-auto">{t('portal.subtitle')}</motion.p>
           </div>
         </section>
 
@@ -283,7 +283,7 @@ const PatientPortalPage: React.FC = () => {
                     <Button
                       onClick={handleLogin}
                       disabled={loading || !emailInput.trim() || !passwordInput}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-[8px]"
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-[8px]"
                       size="lg"
                     >
                       {loading
@@ -309,8 +309,8 @@ const PatientPortalPage: React.FC = () => {
                 /* --- REGISTRATION FORM --- */
               ) : (
                 <>
-                  <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
-                    <User className="w-8 h-8 text-secondary" />
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <User className="w-8 h-8 text-primary" />
                   </div>
                   <h2 className="text-xl font-bold mb-2 text-center">
                     {txt('Create Account', 'إنشاء حساب', 'Créer un compte')}
@@ -409,7 +409,7 @@ const PatientPortalPage: React.FC = () => {
                     <Button
                       onClick={handleRegister}
                       disabled={loading}
-                      className="w-full bg-secondary hover:bg-secondary/90 text-white rounded-[8px]"
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-[8px]"
                       size="lg"
                     >
                       {loading
@@ -442,7 +442,7 @@ const PatientPortalPage: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-secondary"
+            className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent"
           >
             {t('portal.label')}
           </motion.p>
@@ -458,7 +458,7 @@ const PatientPortalPage: React.FC = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto max-w-2xl text-lg text-white/60"
+            className="mx-auto max-w-2xl text-lg text-white/90"
           >
             {t('portal.subtitle')}
           </motion.p>
@@ -500,7 +500,7 @@ const PatientPortalPage: React.FC = () => {
               {[
                 { icon: CalendarCheck, label: language === 'ar' ? 'المواعيد القادمة' : 'Upcoming Appointments', value: appointments.length, color: 'text-primary' },
                 { icon: TestTube, label: language === 'ar' ? 'نتائج الفحوصات' : 'Test Results', value: labResults.length, color: 'text-accent' },
-                { icon: Pill, label: language === 'ar' ? 'الأدوية الحالية' : 'Current Medications', value: patient?.current_medications?.length || 0, color: 'text-secondary' },
+                { icon: Pill, label: language === 'ar' ? 'الأدوية الحالية' : 'Current Medications', value: patient?.current_medications?.length || 0, color: 'text-primary' },
                 { icon: FileText, label: language === 'ar' ? 'إجمالي السجلات' : 'Total Records', value: records.length, color: 'text-muted-foreground' },
               ].map((stat, i) => (
                 <motion.div key={i} variants={fadeUp} initial="hidden" animate="visible" transition={{ delay: i * 0.1 }}

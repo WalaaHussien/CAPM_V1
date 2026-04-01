@@ -21,20 +21,20 @@ const LocationPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      
+
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('location.hero.label')}</motion.p>
+              className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('location.hero.label')}</motion.p>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold text-white mb-4">{t('location.hero.title')}</motion.h1>
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-white/60 max-w-2xl mx-auto mb-8">{t('location.hero.subtitle')}</motion.p>
+              className="text-lg text-white/90 max-w-2xl mx-auto mb-8">{t('location.hero.subtitle')}</motion.p>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
               className="flex justify-center gap-8 flex-wrap">
               {[{ value: '45KM', label: t('location.stats.airport') }, { value: '144', label: t('location.stats.acres') }, { value: '3', label: t('location.stats.continents') }].map((s, i) => (
-                <div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/50">{s.label}</p></div>
+                <div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/80">{s.label}</p></div>
               ))}
             </motion.div>
           </div>
@@ -84,7 +84,7 @@ const LocationPage: React.FC = () => {
               <div className="space-y-2 text-xs text-muted-foreground">
                 <p className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" />{t('location.hours.weekday')}</p>
                 <p className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" />{t('location.hours.weekend')}</p>
-                <p className="flex items-center gap-2 text-secondary font-medium"><Clock className="w-3.5 h-3.5" />{t('location.hours.emergency')}</p>
+                <p className="flex items-center gap-2 text-primary font-medium"><Clock className="w-3.5 h-3.5" />{t('location.hours.emergency')}</p>
               </div>
             </motion.div>
           </div>
@@ -129,7 +129,7 @@ const LocationPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      
+
     </motion.div>
   );
 };

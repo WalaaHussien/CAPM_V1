@@ -28,7 +28,7 @@ interface Specialty {
 
 const specialties: Specialty[] = [
   {
-    icon: Heart, color: 'from-red-500 to-rose-600',
+    icon: Heart, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '45+', fellowships: '12',
     name_en: 'Cardiology', name_ar: 'أمراض القلب والأوعية الدموية', name_fr: 'Cardiologie',
@@ -40,7 +40,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Cardiologie interventionnelle', 'Électrophysiologie', 'Chirurgie cardiaque', 'Réhabilitation'],
   },
   {
-    icon: Brain, color: 'from-purple-500 to-indigo-600',
+    icon: Brain, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '38+', fellowships: '10',
     name_en: 'Neurology & Neurosurgery', name_ar: 'الأعصاب وجراحة المخ والأعصاب', name_fr: 'Neurologie & Neurochirurgie',
@@ -52,7 +52,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Centre AVC', 'Épilepsie', 'Tumeurs cérébrales', 'Chirurgie spinale'],
   },
   {
-    icon: Bone, color: 'from-amber-500 to-orange-600',
+    icon: Bone, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '52+', fellowships: '15',
     name_en: 'Orthopedics & Sports Medicine', name_ar: 'العظام وطب الرياضة', name_fr: 'Orthopédie & Médecine du Sport',
@@ -64,7 +64,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Remplacement articulaire', 'Arthroscopie', 'Troubles spinaux', 'Rééducation sportive'],
   },
   {
-    icon: Baby, color: 'from-pink-500 to-rose-500',
+    icon: Baby, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '60+', fellowships: '18',
     name_en: 'Women & Children', name_ar: 'صحة المرأة والأطفال', name_fr: 'Femmes & Enfants',
@@ -76,7 +76,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Grossesse à risque', 'NICU', 'Chirurgie pédiatrique', 'Oncologie féminine'],
   },
   {
-    icon: Microscope, color: 'from-teal-500 to-cyan-600',
+    icon: Microscope, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '70+', fellowships: '20',
     name_en: 'Oncology & Cancer Care', name_ar: 'الأورام وعلاج السرطان', name_fr: 'Oncologie & Soins du Cancer',
@@ -88,7 +88,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Oncologie médicale', 'Radiothérapie', 'Oncologie chirurgicale', 'Soins palliatifs'],
   },
   {
-    icon: Eye, color: 'from-blue-500 to-sky-600',
+    icon: Eye, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '25+', fellowships: '8',
     name_en: 'Ophthalmology', name_ar: 'طب وجراحة العيون', name_fr: 'Ophtalmologie',
@@ -100,7 +100,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Chirurgie LASIK', 'Chirurgie rétinienne', 'Chirurgie cataracte', 'Glaucome'],
   },
   {
-    icon: Activity, color: 'from-green-500 to-emerald-600',
+    icon: Activity, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '55+', fellowships: '14',
     name_en: 'Internal Medicine', name_ar: 'الطب الباطني', name_fr: 'Médecine Interne',
@@ -112,7 +112,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Endocrinologie', 'Gastroentérologie', 'Rhumatologie', 'Néphrologie'],
   },
   {
-    icon: Scissors, color: 'from-slate-500 to-gray-700',
+    icon: Scissors, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '48+', fellowships: '16',
     name_en: 'Surgery & Minimally Invasive', name_ar: 'الجراحة العامة وطفيفة التوغل', name_fr: 'Chirurgie Générale & Mini-Invasive',
@@ -124,7 +124,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Chirurgie robotique', 'Laparoscopie', 'Chirurgie bariatrique', 'Transplantation'],
   },
   {
-    icon: Wind, color: 'from-cyan-500 to-blue-600',
+    icon: Wind, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '30+', fellowships: '9',
     name_en: 'Pulmonology & Chest', name_ar: 'أمراض الصدر والتنفس', name_fr: 'Pneumologie',
@@ -136,7 +136,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Asthme & BPCO', 'Bronchoscopie', 'Études du sommeil', 'Réhabilitation'],
   },
   {
-    icon: Smile, color: 'from-yellow-500 to-amber-600',
+    icon: Smile, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '35+', fellowships: '11',
     name_en: 'Dentistry & Maxillofacial', name_ar: 'طب الأسنان وجراحة الفك والوجه', name_fr: 'Dentisterie & Maxillo-Faciale',
@@ -148,7 +148,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Implants dentaires', 'Orthodontie', 'Chirurgie buccale', 'Dentisterie esthétique'],
   },
   {
-    icon: Shield, color: 'from-orange-500 to-red-600',
+    icon: Shield, color: 'from-accent to-[hsl(40,85%,33%)]',
     image: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '40+', fellowships: '10',
     name_en: 'Emergency & Trauma', name_ar: 'الطوارئ والحوادث', name_fr: 'Urgences & Traumatologie',
@@ -160,7 +160,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Traumatologie Niv. 1', 'Réanimation', 'Soins intensifs', 'Réponse rapide'],
   },
   {
-    icon: Dna, color: 'from-violet-500 to-purple-700',
+    icon: Dna, color: 'from-primary to-[hsl(193,100%,33%)]',
     image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '28+', fellowships: '12',
     name_en: 'Precision Medicine & Genetics', name_ar: 'الطب الدقيق والجينات', name_fr: 'Médecine de Précision & Génétique',
@@ -201,11 +201,11 @@ const DoctorsPage: React.FC = () => {
       <section className="page-hero">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.expertTeam')}</motion.p>
+            className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.expertTeam')}</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-white mb-4">{t('doctors.page.title')}</motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-white/60 max-w-2xl mx-auto">
+            className="text-lg text-white/90 max-w-2xl mx-auto">
             {txt(
               'World-class specialties at CAPITALMED — each led by board-certified experts dedicated to your care.',
               'تخصصات عالمية في كابيتال ميد — كل منها يقوده أطباء معتمدون دولياً مكرسون لرعايتك.',
@@ -222,8 +222,8 @@ const DoctorsPage: React.FC = () => {
             {teamHighlights.map((stat, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="premium-card text-center p-6">
-                <stat.icon className="w-8 h-8 text-secondary mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold text-secondary mb-2">{stat.value}</div>
+                <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-muted-foreground text-sm">{txt(stat.labelEn, stat.labelAr, stat.labelFr)}</div>
               </motion.div>
             ))}
@@ -280,7 +280,7 @@ const DoctorsPage: React.FC = () => {
                     <p className="text-sm text-muted-foreground mb-4 flex-1">{desc}</p>
                     <div className="flex flex-wrap gap-1.5 mb-4">
                       {highlights.map((h, j) => (
-                        <Badge key={j} variant="secondary" className="text-[11px] font-normal rounded-full">{h}</Badge>
+                        <Badge key={j} className="text-[11px] font-normal rounded-full bg-primary text-primary-foreground">{h}</Badge>
                       ))}
                     </div>
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4 border-t border-border pt-3">
@@ -289,7 +289,7 @@ const DoctorsPage: React.FC = () => {
                     </div>
                     <div className="flex gap-2">
                       <Link to="/contact" className="flex-1">
-                        <Button size="sm" className="w-full rounded-[8px] text-xs bg-primary hover:bg-primary/90">
+                        <Button size="sm" className="w-full rounded-[8px] text-xs bg-accent hover:bg-accent/90">
                           <Calendar className="w-3.5 h-3.5 mr-1" />
                           {txt('Book Appointment', 'احجز موعداً', 'Prendre rendez-vous')}
                         </Button>
@@ -342,7 +342,7 @@ const DoctorsPage: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="premium-card p-8 md:p-12 text-center max-w-3xl mx-auto">
-            <Stethoscope className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <Stethoscope className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-3">
               {txt('Need Help Finding the Right Specialty?', 'تحتاج مساعدة في اختيار التخصص المناسب؟', 'Besoin d\'aide pour trouver la bonne spécialité ?')}
             </h2>
@@ -355,7 +355,7 @@ const DoctorsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/contact">
-                <Button className="bg-secondary hover:bg-secondary/90 text-white px-8">
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8">
                   <Phone className="w-4 h-4 mr-2" />{t('contact.title')}
                 </Button>
               </Link>

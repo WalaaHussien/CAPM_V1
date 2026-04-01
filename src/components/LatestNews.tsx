@@ -58,7 +58,7 @@ const LatestNews: React.FC = () => {
                             </div>
                             <div className="p-5">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <span className="text-xs font-medium text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">{article.category}</span>
+                                    <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full">{article.category}</span>
                                     <span className="text-xs text-muted-foreground flex items-center gap-1">
                                         <Calendar className="w-3 h-3" /> {article.date}
                                     </span>

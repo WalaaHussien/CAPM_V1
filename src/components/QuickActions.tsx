@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const quickActions = [
-  { key: 'quick.doctor', desc: 'quick.doctor.desc', cta: 'quick.doctor.cta', icon: UserSearch, href: '/doctors', accent: 'hsl(var(--primary))', iconBg: 'bg-primary/10', btnClass: 'bg-primary text-primary-foreground group-hover:bg-primary/90' },
-  { key: 'quick.appointments', desc: 'quick.appointments.desc', cta: 'quick.appointments.cta', icon: Calendar, href: '/contact', accent: '#10b981', iconBg: 'bg-emerald-500/10', btnClass: 'bg-emerald-700 text-white group-hover:bg-emerald-800' },
-  { key: 'quick.facilities', desc: 'quick.facilities.desc', cta: 'quick.facilities.cta', icon: Building2, href: '/facilities', accent: '#f59e0b', iconBg: 'bg-amber-500/10', btnClass: 'bg-amber-700 text-white group-hover:bg-amber-800' },
-  { key: 'quick.specializations', desc: 'quick.specializations.desc', cta: 'quick.specializations.cta', icon: Stethoscope, href: '/services', accent: 'hsl(var(--primary))', iconBg: 'bg-primary/10', btnClass: 'bg-primary text-primary-foreground group-hover:bg-primary/90' },
-  { key: 'quick.tourism', desc: 'quick.tourism.desc', cta: 'quick.tourism.cta', icon: Plane, href: '/medical-tourism', accent: '#38bdf8', iconBg: 'bg-sky-400/10', btnClass: 'bg-sky-600 text-white group-hover:bg-sky-700' },
+  { key: 'quick.doctor', desc: 'quick.doctor.desc', cta: 'quick.doctor.cta', icon: UserSearch, href: '/doctors', accent: 'hsl(var(--accent))', iconBg: 'bg-accent/10', btnClass: 'bg-accent text-accent-foreground group-hover:bg-accent/90' },
+  { key: 'quick.appointments', desc: 'quick.appointments.desc', cta: 'quick.appointments.cta', icon: Calendar, href: '/contact', accent: 'hsl(var(--accent))', iconBg: 'bg-accent/10', btnClass: 'bg-accent text-accent-foreground group-hover:bg-accent/90' },
+  { key: 'quick.facilities', desc: 'quick.facilities.desc', cta: 'quick.facilities.cta', icon: Building2, href: '/facilities', accent: 'hsl(var(--accent))', iconBg: 'bg-accent/10', btnClass: 'bg-accent text-accent-foreground group-hover:bg-accent/90' },
+  { key: 'quick.specializations', desc: 'quick.specializations.desc', cta: 'quick.specializations.cta', icon: Stethoscope, href: '/services', accent: 'hsl(var(--accent))', iconBg: 'bg-accent/10', btnClass: 'bg-accent text-accent-foreground group-hover:bg-accent/90' },
+  { key: 'quick.tourism', desc: 'quick.tourism.desc', cta: 'quick.tourism.cta', icon: Plane, href: '/medical-tourism', accent: 'hsl(var(--accent))', iconBg: 'bg-accent/10', btnClass: 'bg-accent text-accent-foreground group-hover:bg-accent/90' },
 ];
 
 const QuickActions: React.FC = () => {

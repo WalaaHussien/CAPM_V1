@@ -14,9 +14,9 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 const COLORS = [
-  'hsl(224, 65%, 38%)', 'hsl(160, 60%, 40%)', 'hsl(27, 85%, 55%)',
-  'hsl(350, 65%, 50%)', 'hsl(260, 50%, 55%)', 'hsl(199, 85%, 50%)',
-  'hsl(120, 40%, 45%)', 'hsl(45, 70%, 50%)'
+  'hsl(193, 100%, 45%)', 'hsl(193, 100%, 33%)', 'hsl(40, 90%, 52%)',
+  'hsl(350, 65%, 50%)', 'hsl(193, 80%, 55%)', 'hsl(193, 70%, 50%)',
+  'hsl(193, 100%, 48%)', 'hsl(40, 80%, 48%)'
 ];
 
 const HealthcarePage: React.FC = () => {
@@ -95,7 +95,7 @@ const HealthcarePage: React.FC = () => {
       <section className="page-hero">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">
             {isAr ? 'نظرة شاملة' : 'Comprehensive Overview'}
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
@@ -103,7 +103,7 @@ const HealthcarePage: React.FC = () => {
             {isAr ? 'نظام الرعاية الصحية في مصر' : 'Healthcare System Overview'}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-white/60 max-w-3xl mx-auto">
+            className="text-lg text-white/90 max-w-3xl mx-auto">
             {isAr
               ? 'تحليل شامل لواقع الرعاية الصحية في مصر وكيف تسعى كابيتال ميد لتغيير هذا الواقع'
               : 'A comprehensive analysis of Egypt\'s healthcare landscape and how CAPITALMED aims to transform it'}
@@ -135,13 +135,13 @@ const HealthcarePage: React.FC = () => {
       </section>
 
       {/* CAPITALMED Differentiation */}
-      <section className="py-16 bg-[hsl(224,68%,18%)]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl font-bold text-white mb-3">
+            <h2 className="text-3xl font-bold text-foreground mb-3">
               {isAr ? 'ما الذي يميز كابيتال ميد؟' : 'What Makes CAPITALMED Different?'}
             </h2>
-            <p className="text-white/60 mb-10 max-w-2xl mx-auto text-sm">
+            <p className="text-muted-foreground mb-10 max-w-2xl mx-auto text-sm">
               {isAr ? 'مدينة صحية ذكية متكاملة تخدم أكثر من 5 ملايين عميل سنوياً' : 'A smart fully-fledged Healthcare City serving 5M+ clients annually'}
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -151,9 +151,9 @@ const HealthcarePage: React.FC = () => {
                 { n: '70', l: isAr ? 'غرفة عمليات' : 'ORs' },
                 { n: '15,000+', l: isAr ? 'مقدم رعاية' : 'Providers' },
               ].map((s, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-5 text-center">
-                  <p className="text-2xl font-bold text-white">{s.n}</p>
-                  <p className="text-xs text-white/50">{s.l}</p>
+                <div key={i} className="bg-primary/5 border border-primary/15 rounded-xl p-5 text-center">
+                  <p className="text-2xl font-bold text-primary">{s.n}</p>
+                  <p className="text-xs text-muted-foreground">{s.l}</p>
                 </div>
               ))}
             </div>
@@ -185,7 +185,7 @@ const HealthcarePage: React.FC = () => {
                   <XAxis dataKey="country" tick={{ fontSize: 11 }} />
                   <YAxis tick={{ fontSize: 11 }} />
                   <Tooltip />
-                  <Bar dataKey="spending" fill="hsl(224, 65%, 38%)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="spending" fill="hsl(193, 100%, 45%)" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </motion.div>
@@ -280,7 +280,7 @@ const HealthcarePage: React.FC = () => {
                 <PolarAngleAxis dataKey="metric" tick={{ fontSize: 10 }} />
                 <PolarRadiusAxis domain={[0, 100]} tick={{ fontSize: 10 }} />
                 <Radar name={isAr ? 'المعيار الحالي' : 'Current Standard'} dataKey="current" stroke="hsl(350, 65%, 50%)" fill="hsl(350, 65%, 50%)" fillOpacity={0.2} />
-                <Radar name="CAPITALMED" dataKey="capitalmed" stroke="hsl(224, 65%, 38%)" fill="hsl(224, 65%, 38%)" fillOpacity={0.3} />
+                <Radar name="CAPITALMED" dataKey="capitalmed" stroke="hsl(193, 100%, 45%)" fill="hsl(193, 100%, 45%)" fillOpacity={0.3} />
                 <Legend wrapperStyle={{ direction: isAr ? 'rtl' : 'ltr' }} />
                 <Tooltip />
               </RadarChart>
@@ -293,11 +293,11 @@ const HealthcarePage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="bg-[hsl(224,68%,18%)] rounded-xl p-10 md:p-14 text-center">
-            <h2 className="text-3xl font-bold text-white mb-3">
+            className="bg-primary/5 border border-primary/15 rounded-xl p-10 md:p-14 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-3">
               {isAr ? 'كابيتال ميد: أمل جديد للرعاية الصحية' : 'CAPITALMED: A New Hope for Healthcare'}
             </h2>
-            <p className="text-white/60 mb-8 max-w-xl mx-auto">
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               {isAr
                 ? 'مشروع لتغيير واقع الرعاية الصحية في مصر والشرق الأوسط'
                 : 'A project to revolutionize healthcare in Egypt and the Middle East'}
@@ -310,7 +310,7 @@ const HealthcarePage: React.FC = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" className="bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 rounded-[8px]">
+                <Button size="lg" variant="outline" className="rounded-[8px]">
                   {isAr ? 'تواصل معنا' : 'Contact Us'}
                 </Button>
               </Link>

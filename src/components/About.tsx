@@ -54,8 +54,8 @@ const About: React.FC = () => {
               </div>
 
               <div className="flex gap-4 p-5 bg-muted/60 rounded-xl group hover:bg-muted transition-colors duration-300">
-                <div className="w-11 h-11 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Eye className="w-5 h-5 text-secondary" />
+                <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Eye className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground text-sm mb-1">{t('about.vision')}</h3>

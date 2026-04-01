@@ -15,65 +15,65 @@
     --header-height: 7.75rem;
     --section-space: clamp(4rem, 7vw, 6rem);
 
-    /* Royal Navy Blue — matches CapitalMed logo background */
-    --primary: 224 65% 32%;
+    /* Primary Cyan #00B4E6 */
+    --primary: 193 100% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 55% 52%;
-    --primary-dark: 224 72% 20%;
+    --primary-light: 193 58% 94%;
+    --primary-dark: 193 100% 33%;
 
-    /* Cyan/Sky — matches CapitalMed logo wings */
-    --secondary: 199 90% 46%;
+    /* Secondary — Dark Primary */
+    --secondary: 193 100% 33%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Clean White-Blue Background */
-    --background: 220 40% 98%;
-    /* Deep Navy Text */
-    --foreground: 224 38% 18%;
+    /* Pure white background */
+    --background: 0 0% 100%;
+    /* Main text #1A1A1A */
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 38% 18%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 38% 18%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Muted */
-    --muted: 220 25% 95%;
-    --muted-foreground: 220 15% 48%;
+    /* Muted — Section alternate #F7FAFC */
+    --muted: 204 45% 98%;
+    --muted-foreground: 220 9% 46%;
 
-    /* Accent — warm amber/orange matches logo feather accents */
-    --accent: 27 85% 55%;
+    /* Accent — Orange #F3A916 */
+    --accent: 40 90% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 90%;
-    --input: 220 20% 88%;
-    --ring: 224 65% 32%;
+    --border: 193 18% 88%;
+    --input: 193 18% 86%;
+    --ring: 193 100% 45%;
 
     --radius: 0.5rem;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(224 68% 28%) 0%, hsl(224 72% 18%) 50%, hsl(220 65% 22%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(224 65% 38%) 0%, hsl(224 70% 26%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(199 90% 46%) 0%, hsl(199 85% 55%) 100%);
-    --gradient-light: linear-gradient(180deg, hsl(220 40% 98%) 0%, hsl(220 30% 96%) 100%);
+    /* Gradients — cyan primary */
+    --gradient-hero: linear-gradient(135deg, hsl(193 100% 33%) 0%, hsl(193 100% 24%) 50%, hsl(193 90% 16%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(193 100% 45%) 0%, hsl(193 100% 33%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(193 100% 38%) 0%, hsl(193 100% 26%) 100%);
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(193 58% 96%) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(10, 25, 80, 0.05);
-    --shadow-md: 0 4px 12px -2px rgba(10, 25, 80, 0.08);
-    --shadow-lg: 0 12px 24px -4px rgba(10, 25, 80, 0.10);
-    --shadow-xl: 0 20px 40px -8px rgba(10, 25, 80, 0.13);
+    /* Shadows — cyan-tinted */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 180, 230, 0.05);
+    --shadow-md: 0 4px 12px -2px rgba(0, 180, 230, 0.10);
+    --shadow-lg: 0 12px 24px -4px rgba(0, 180, 230, 0.12);
+    --shadow-xl: 0 20px 40px -8px rgba(0, 180, 230, 0.14);
 
     /* Sidebar */
-    --sidebar-background: 0 0% 99%;
-    --sidebar-foreground: 224 30% 22%;
-    --sidebar-primary: 224 65% 32%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 193 100% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 30% 96%;
-    --sidebar-accent-foreground: 224 30% 15%;
-    --sidebar-border: 220 18% 90%;
-    --sidebar-ring: 224 65% 32%;
+    --sidebar-accent: 193 58% 94%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 193 18% 88%;
+    --sidebar-ring: 193 100% 45%;
   }
 
   .dark {
@@ -86,18 +86,18 @@
     --popover: 224 40% 11%;
     --popover-foreground: 220 20% 95%;
 
-    --primary: 224 60% 55%;
+    --primary: 193 100% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 224 55% 68%;
-    --primary-dark: 224 68% 38%;
+    --primary-light: 193 60% 62%;
+    --primary-dark: 193 100% 36%;
 
-    --secondary: 199 85% 52%;
+    --secondary: 193 100% 40%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 224 30% 15%;
     --muted-foreground: 220 15% 65%;
 
-    --accent: 27 85% 58%;
+    --accent: 40 90% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
@@ -105,16 +105,16 @@
 
     --border: 224 30% 18%;
     --input: 224 30% 18%;
-    --ring: 224 60% 55%;
+    --ring: 193 100% 52%;
 
     --sidebar-background: 224 45% 7%;
     --sidebar-foreground: 220 20% 90%;
-    --sidebar-primary: 224 60% 55%;
+    --sidebar-primary: 193 100% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 224 30% 13%;
     --sidebar-accent-foreground: 220 20% 90%;
     --sidebar-border: 224 30% 16%;
-    --sidebar-ring: 224 60% 55%;
+    --sidebar-ring: 193 100% 52%;
   }
 }
 
@@ -249,7 +249,7 @@
   /* Premium Page Hero with wave divider */
   .page-hero {
     @apply relative overflow-hidden pb-20 pt-44 md:pb-24 md:pt-48;
-    background: linear-gradient(135deg, hsl(224 68% 28%) 0%, hsl(224 72% 18%) 100%);
+    background: linear-gradient(180deg, #00B4E6 0%, #0088AD 100%);
   }
 
   .page-hero h1,
@@ -260,9 +260,10 @@
 
   .page-hero::before {
     content: '';
-    @apply absolute inset-0 opacity-20;
-    background: radial-gradient(circle at 20% 80%, hsl(199 90% 46% / 0.35) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, hsl(27 85% 55% / 0.20) 0%, transparent 50%);
+    @apply absolute inset-0;
+    background: radial-gradient(ellipse 70% 80% at 15% 90%, hsl(193 100% 55% / 0.20) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 60% at 85% 10%, hsl(193 100% 60% / 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 40% at 50% 50%, hsl(40 90% 52% / 0.06) 0%, transparent 60%);
   }
 
   .page-hero::after {
@@ -342,7 +343,7 @@
   }
 
   .hero-carousel-arrow {
-    @apply pointer-events-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/30 text-white/80 transition-all duration-200 hover:border-white/60 hover:bg-white/10 hover:text-white active:scale-95 sm:h-12 sm:w-12;
+    @apply pointer-events-auto flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/30 text-white/80 transition-all duration-200 hover:border-primary hover:bg-primary/20 hover:text-white active:scale-95 sm:h-12 sm:w-12;
   }
 
   .hero-carousel-indicator {
@@ -350,7 +351,7 @@
   }
 
   .hero-carousel-indicator--active {
-    @apply w-8 bg-accent;
+    @apply w-8 bg-primary;
   }
 
   .hero-carousel-indicator--idle {

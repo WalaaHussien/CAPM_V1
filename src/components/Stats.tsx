@@ -12,12 +12,12 @@ interface StatItem {
 }
 
 const statsData: StatItem[] = [
-  { value: 500000, suffix: '+', labelKey: 'stats.patients', icon: Activity },
-  { value: 4500, suffix: '+', labelKey: 'stats.beds', icon: BedDouble },
-  { value: 450, suffix: '+', labelKey: 'stats.icu', icon: Siren },
-  { value: 120, suffix: '+', labelKey: 'stats.operating', icon: Building2 },
-  { value: 3000, suffix: '+', labelKey: 'stats.providers', icon: Users },
-  { value: 100, suffix: '+', labelKey: 'stats.specialties', icon: Stethoscope },
+  { value: 5000000, suffix: '+', labelKey: 'stats.patients', icon: Activity },
+  { value: 4000, suffix: '+', labelKey: 'stats.beds', icon: BedDouble },
+  { value: 700, suffix: '', labelKey: 'stats.icu', icon: Siren },
+  { value: 70, suffix: '', labelKey: 'stats.operating', icon: Building2 },
+  { value: 15000, suffix: '+', labelKey: 'stats.providers', icon: Users },
+  { value: 100, suffix: '', labelKey: 'stats.specialties', icon: Stethoscope },
 ];
 
 const AnimatedCounter: React.FC<{ value: number; suffix?: string; duration?: number }> = ({
@@ -59,10 +59,10 @@ const Stats: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[hsl(224,68%,22%)] via-[hsl(224,70%,16%)] to-[hsl(224,72%,11%)] relative overflow-hidden">
+    <section className="py-20 bg-primary/5 border-y border-primary/15 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent rounded-full blur-[100px]" />
       </div>
       <div className="container mx-auto px-6 relative z-10">
@@ -85,16 +85,16 @@ const Stats: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -4 }}
                 className="text-center group"
               >
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors duration-300">
                   <Icon className="w-5 h-5 text-accent" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
                   <AnimatedCounter
                     value={getStatValue(stat.labelKey.split('.')[1], stat.value)}
                     suffix={stat.suffix}
                   />
                 </div>
-                <span className="text-white/60 text-xs uppercase tracking-wider font-medium">
+                <span className="text-muted-foreground text-xs uppercase tracking-wider font-medium">
                   {t(stat.labelKey)}
                 </span>
                 {isEditMode && <span className="text-xs text-accent mt-1 block">[Editable]</span>}

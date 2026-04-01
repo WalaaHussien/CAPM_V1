@@ -28,16 +28,16 @@ const ContactPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      
+
 
       <section className="page-hero">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.getInTouch')}</motion.p>
+            className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.getInTouch')}</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-white mb-4">{t('contact.page.title')}</motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-white/60 max-w-2xl mx-auto">{t('contact.page.subtitle')}</motion.p>
+            className="text-lg text-white/90 max-w-2xl mx-auto">{t('contact.page.subtitle')}</motion.p>
         </div>
       </section>
 
@@ -98,7 +98,7 @@ const ContactPage: React.FC = () => {
                   <Label htmlFor="message" className="text-sm">{t('contact.form.message')}</Label>
                   <Textarea id="message" rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required className="rounded-[6px]" />
                 </div>
-                <Button type="submit" size="lg" className="w-full sm:w-auto rounded-[8px] bg-primary hover:bg-primary/90">
+                <Button type="submit" size="lg" className="w-full sm:w-auto rounded-[8px] bg-accent hover:bg-accent/90">
                   <Send className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
                   {t('contact.form.submit')}
                 </Button>
@@ -140,7 +140,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      
+
     </motion.div>
   );
 };

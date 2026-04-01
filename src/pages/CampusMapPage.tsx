@@ -28,13 +28,13 @@ interface BuildingData {
 
 /* ─── Color map by type ─── */
 const TYPE_COLOR: Record<BuildingType, string> = {
-  hospital: '#2563eb',
-  emergency: '#dc2626',
-  research: '#7c3aed',
-  wellness: '#059669',
-  hotel: '#d97706',
-  commercial: '#db2777',
-  admin: '#475569',
+  hospital: '#00B4E6',   /* primary cyan */
+  emergency: '#dc2626',  /* red — safety standard, keep */
+  research: '#0088AD',   /* secondary dark cyan */
+  wellness: '#33CCFF',   /* primary light cyan */
+  hotel: '#F3A916',      /* accent orange */
+  commercial: '#009BBF',  /* mid-cyan variant */
+  admin: '#64748B',      /* neutral slate */
 };
 const TYPE_LABEL: Record<BuildingType, string> = {
   hospital: 'Hospital', emergency: 'Emergency', research: 'Research',

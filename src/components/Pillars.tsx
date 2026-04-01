@@ -65,7 +65,7 @@ const Pillars: React.FC = () => {
                     <h3 className="text-xl font-bold text-foreground mb-1">
                       {t(pillar.titleKey)}
                     </h3>
-                    <p className="text-secondary text-sm font-medium mb-3">
+                    <p className="text-primary text-sm font-medium mb-3">
                       {t(pillar.subtitleKey)}
                     </p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6">

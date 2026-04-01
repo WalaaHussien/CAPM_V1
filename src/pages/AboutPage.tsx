@@ -18,24 +18,24 @@ const AboutPage: React.FC = () => {
   ];
 
   const milestones = [
-    { year: '2020', key: 'about.milestone.1' },
+    { year: '2021', key: 'about.milestone.1' },
     { year: '2022', key: 'about.milestone.2' },
-    { year: '2024', key: 'about.milestone.3' },
-    { year: '2026', key: 'about.milestone.4' },
+    { year: '2023', key: 'about.milestone.3' },
+    { year: '2025', key: 'about.milestone.4' },
   ];
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      
+
 
       <section className="page-hero">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.aboutCapitalMed')}</motion.p>
+            className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.aboutCapitalMed')}</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-white mb-4">{t('about.page.title')}</motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-white/60 max-w-2xl mx-auto">{t('about.page.subtitle')}</motion.p>
+            className="text-lg text-white/90 max-w-2xl mx-auto">{t('about.page.subtitle')}</motion.p>
         </div>
       </section>
 
@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { icon: Target, title: t('about.mission'), text: t('about.mission.text'), color: 'bg-accent/10', iconColor: 'text-accent' },
-              { icon: Eye, title: t('about.vision'), text: t('about.vision.text'), color: 'bg-secondary/10', iconColor: 'text-secondary' },
+              { icon: Eye, title: t('about.vision'), text: t('about.vision.text'), color: 'bg-primary/10', iconColor: 'text-primary' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -3 }} className="premium-card p-8">
@@ -136,7 +136,7 @@ const AboutPage: React.FC = () => {
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Building2, value: '577,000', label: t('about.stat.area') },
-              { icon: Stethoscope, value: '3,000+', label: t('about.stat.providers') },
+              { icon: Stethoscope, value: '15,000+', label: t('about.stat.providers') },
               { icon: Users, value: '500,000+', label: t('about.stat.patients') },
               { icon: Award, value: '100+', label: t('about.stat.specialties') },
             ].map((stat) => (
@@ -150,7 +150,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      
+
     </motion.div>
   );
 };

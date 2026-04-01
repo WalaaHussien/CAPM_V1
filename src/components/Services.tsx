@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
   Siren, Scissors, Heart, Ribbon, Brain, Baby, ArrowRight
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -76,7 +76,7 @@ const Services: React.FC = () => {
           className="text-center mt-12"
         >
           <Link to="/services">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-[8px] px-8">
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-[8px] px-8">
               {t('nav.services')}
               <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-2 rotate-180' : 'ml-2'}`} />
             </Button>

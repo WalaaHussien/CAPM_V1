@@ -184,3 +184,20 @@ GRANT EXECUTE ON FUNCTION public.restore_session(UUID, UUID) TO anon;
 -- Session tokens for session persistence.
 -- ================================================================
 -- Click Save
+
+-- ========================
+-- STEP 7: Newsletter Subscribers Table
+-- ========================
+CREATE TABLE IF NOT EXISTS public.newsletter_subscribers (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  email TEXT NOT NULL,
+  subscribed_at TIMESTAMPTZ DEFAULT NOW(),
+  CONSTRAINT newsletter_subscribers_email_key UNIQUE (email)
+);
+
+ALTER TABLE public.newsletter_subscribers ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow anonymous insert" ON public.newsletter_subscribers
+  FOR INSERT TO anon WITH CHECK (true);
+
+GRANT INSERT ON public.newsletter_subscribers TO anon;

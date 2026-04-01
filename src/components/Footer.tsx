@@ -33,8 +33,8 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(224 68% 26%) 0%, hsl(224 72% 17%) 100%)' }}>
-      <div className="absolute inset-0 opacity-20" style={{ background: 'radial-gradient(circle at 20% 80%, hsl(199 90% 46% / 0.30) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(27 85% 55% / 0.18) 0%, transparent 50%)' }} />
+    <footer className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(180deg, #00B4E6 0%, #0088AD 100%)' }}>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 15% 85%, hsl(193 100% 50% / 0.25) 0%, transparent 50%), radial-gradient(circle at 85% 15%, hsl(193 100% 55% / 0.12) 0%, transparent 45%), radial-gradient(circle at 50% 50%, hsl(40 90% 52% / 0.06) 0%, transparent 60%)' }} />
       <div className="relative container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               alt="CapitalMed"
               className="h-16 w-auto object-contain mb-6"
             />
-            <p className="text-white/80 text-sm leading-relaxed mb-6">
+            <p className="text-white text-sm leading-relaxed mb-6">
               {t('footer.description')}
             </p>
             <div className="flex gap-2">
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                    className="w-9 h-9 rounded-full border border-white flex items-center justify-center text-accent hover:text-white hover:border-accent hover:bg-accent transition-colors"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                 { label: t('nav.contact'), href: '/contact' },
               ].map((link, index) => (
                 <li key={index}>
-                  <Link to={link.href} className="text-white/80 hover:text-white text-sm transition-colors">
+                  <Link to={link.href} className="text-white hover:text-accent text-sm transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
                 { label: t('services.pediatrics.title'), href: '/services' },
               ].map((service, index) => (
                 <li key={index}>
-                  <Link to={service.href} className="text-white/80 hover:text-white text-sm transition-colors">
+                  <Link to={service.href} className="text-white hover:text-accent text-sm transition-colors">
                     {service.label}
                   </Link>
                 </li>
@@ -116,13 +116,13 @@ const Footer: React.FC = () => {
                 const isEmail = item.icon === Mail;
                 return (
                   <li key={index} className="flex items-start gap-3">
-                    <Icon className="w-4 h-4 text-accent/80 mt-0.5 flex-shrink-0" />
+                    <Icon className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
                     {isPhone ? (
-                      <a href={`tel:${item.text.replace(/\s/g, '')}`} className="text-white/80 text-sm hover:text-white transition-colors">{item.text}</a>
+                      <a href={`tel:${item.text.replace(/\s/g, '')}`} className="text-white text-sm hover:text-accent transition-colors">{item.text}</a>
                     ) : isEmail ? (
-                      <a href={`mailto:${item.text}`} className="text-white/80 text-sm hover:text-white transition-colors">{item.text}</a>
+                      <a href={`mailto:${item.text}`} className="text-white text-sm hover:text-accent transition-colors">{item.text}</a>
                     ) : (
-                      <span className="text-white/80 text-sm">{item.text}</span>
+                      <span className="text-white text-sm">{item.text}</span>
                     )}
                   </li>
                 );
@@ -137,14 +137,14 @@ const Footer: React.FC = () => {
       <div className="relative border-t border-white/10">
         <div className="container mx-auto px-6 py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-white/60">
+            <p className="text-xs text-white/80">
               {t('footer.copyright')}
             </p>
             <div className="flex gap-6 text-xs">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="#" className="text-white/80 hover:text-white transition-colors">
                 {t('footer.privacy')}
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="#" className="text-white/80 hover:text-white transition-colors">
                 {t('footer.terms')}
               </a>
             </div>

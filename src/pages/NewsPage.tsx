@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 
 import heroHospital from '@/assets/hero-hospital.jpg';
 import adminBuilding from '@/assets/admin-building.png';
@@ -19,6 +21,35 @@ const NewsPage: React.FC = () => {
   const { t, language, isRTL } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('All');
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [subscribing, setSubscribing] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const email = newsletterEmail.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error(language === 'ar' ? 'يرجى إدخال بريد إلكتروني صحيح' : 'Please enter a valid email address');
+      return;
+    }
+    setSubscribing(true);
+    try {
+      const { error } = await supabase.from('newsletter_subscribers' as any).insert({ email } as any);
+      if (error) {
+        if (error.code === '23505') {
+          toast.info(language === 'ar' ? 'أنت مشترك بالفعل!' : 'You are already subscribed!');
+        } else {
+          throw error;
+        }
+      } else {
+        toast.success(language === 'ar' ? 'تم الاشتراك بنجاح!' : 'Successfully subscribed!');
+        setNewsletterEmail('');
+      }
+    } catch {
+      toast.error(language === 'ar' ? 'حدث خطأ، حاول مرة أخرى' : 'Something went wrong, please try again');
+    } finally {
+      setSubscribing(false);
+    }
+  };
 
   const categories = [
     { key: 'All', label: t('news.categories.all') },
@@ -84,11 +115,11 @@ const NewsPage: React.FC = () => {
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.latestUpdates')}</motion.p>
+              className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('misc.latestUpdates')}</motion.p>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold text-white mb-4">{t('news.hero.title')}</motion.h1>
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-white/60">{t('news.hero.subtitle')}</motion.p>
+              className="text-lg text-white/90">{t('news.hero.subtitle')}</motion.p>
           </div>
         </section>
         <section className="container mx-auto px-6 py-10">
@@ -161,10 +192,21 @@ const NewsPage: React.FC = () => {
             className="premium-card p-8 text-center max-w-lg mx-auto">
             <h2 className="text-xl font-bold mb-3">{t('news.newsletter.title')}</h2>
             <p className="text-muted-foreground text-sm mb-5">{t('news.newsletter.subtitle')}</p>
-            <div className="flex gap-3 max-w-sm mx-auto">
-              <Input placeholder={t('news.newsletter.placeholder')} type="email" className="rounded-[6px]" />
-              <Button className="rounded-[8px]">{t('news.newsletter.subscribe')}</Button>
-            </div>
+            <form onSubmit={handleSubscribe} className="flex gap-3 max-w-sm mx-auto">
+              <Input
+                placeholder={t('news.newsletter.placeholder')}
+                type="email"
+                className="rounded-[6px]"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                disabled={subscribing}
+              />
+              <Button type="submit" className="rounded-[8px]" disabled={subscribing}>
+                {subscribing
+                  ? (language === 'ar' ? 'جاري...' : 'Sending...')
+                  : t('news.newsletter.subscribe')}
+              </Button>
+            </form>
           </motion.div>
         </section>
       </main>

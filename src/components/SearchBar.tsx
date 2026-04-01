@@ -26,23 +26,23 @@ interface SearchEntry {
 }
 
 const pages: SearchEntry[] = [
-  { title: 'Home', titleAr: 'الرئيسية', href: '/', keywords: ['home', 'main', 'landing', 'الرئيسية'], icon: Home, description: 'Back to homepage', descriptionAr: 'العودة للصفحة الرئيسية', group: 'main', color: 'bg-blue-500/15 text-blue-600' },
-  { title: 'About Us', titleAr: 'من نحن', href: '/about', keywords: ['about', 'history', 'mission', 'vision', 'من نحن'], icon: Info, description: 'Our story & mission', descriptionAr: 'قصتنا ورسالتنا', group: 'main', color: 'bg-purple-500/15 text-purple-600' },
-  { title: 'Services', titleAr: 'الخدمات', href: '/services', keywords: ['services', 'medical', 'healthcare', 'treatment', 'خدمات'], icon: Stethoscope, description: 'Medical services offered', descriptionAr: 'الخدمات الطبية المقدمة', group: 'main', color: 'bg-emerald-500/15 text-emerald-600' },
-  { title: 'Find a Doctor', titleAr: 'ابحث عن طبيب', href: '/doctors', keywords: ['doctor', 'physician', 'specialist', 'find', 'طبيب'], icon: UserSearch, description: 'Browse our medical team', descriptionAr: 'تصفح فريقنا الطبي', group: 'main', color: 'bg-teal-500/15 text-teal-600' },
-  { title: 'Contact Us', titleAr: 'اتصل بنا', href: '/contact', keywords: ['contact', 'phone', 'email', 'address', 'اتصل'], icon: Phone, description: 'Get in touch', descriptionAr: 'تواصل معنا', group: 'main', color: 'bg-pink-500/15 text-pink-600' },
-  { title: 'Facilities', titleAr: 'المرافق', href: '/facilities', keywords: ['facilities', 'building', 'campus', 'hospital', 'مرافق'], icon: Building2, description: 'Our world-class facilities', descriptionAr: 'مرافقنا العالمية', group: 'explore', color: 'bg-orange-500/15 text-orange-600' },
-  { title: 'Medical Tourism', titleAr: 'السياحة العلاجية', href: '/medical-tourism', keywords: ['tourism', 'travel', 'international', 'patient', 'سياحة', 'علاجية'], icon: Plane, description: 'International patient services', descriptionAr: 'خدمات المرضى الدوليين', group: 'explore', color: 'bg-sky-500/15 text-sky-600' },
-  { title: 'Research', titleAr: 'الأبحاث', href: '/research', keywords: ['research', 'science', 'innovation', 'study', 'أبحاث'], icon: FlaskConical, description: 'Innovation & research', descriptionAr: 'الابتكار والبحث', group: 'explore', color: 'bg-violet-500/15 text-violet-600' },
-  { title: 'Partnerships', titleAr: 'الشراكات', href: '/partnerships', keywords: ['partnership', 'collaborate', 'partner', 'شراكات'], icon: Handshake, description: 'Our global partners', descriptionAr: 'شركاؤنا العالميون', group: 'explore', color: 'bg-indigo-500/15 text-indigo-600' },
-  { title: 'Development Phases', titleAr: 'مراحل التطوير', href: '/development-phases', keywords: ['development', 'phases', 'construction', 'progress', 'تطوير', 'مراحل'], icon: Layers, description: 'Project milestones', descriptionAr: 'مراحل المشروع', group: 'explore', color: 'bg-yellow-500/15 text-yellow-600' },
-  { title: 'Investment', titleAr: 'الاستثمار', href: '/investment', keywords: ['investment', 'invest', 'finance', 'opportunity', 'استثمار'], icon: TrendingUp, description: 'Investment opportunities', descriptionAr: 'فرص الاستثمار', group: 'explore', color: 'bg-green-500/15 text-green-600' },
-  { title: 'Insurance & Billing', titleAr: 'التأمين والفواتير', href: '/insurance', keywords: ['insurance', 'billing', 'payment', 'coverage', 'تأمين', 'فواتير'], icon: Shield, description: 'Insurance & payment info', descriptionAr: 'معلومات التأمين والدفع', group: 'explore', color: 'bg-cyan-500/15 text-cyan-600' },
-  { title: 'News', titleAr: 'الأخبار', href: '/news', keywords: ['news', 'updates', 'press', 'media', 'أخبار'], icon: Newspaper, description: 'Latest updates', descriptionAr: 'آخر الأخبار', group: 'explore', color: 'bg-red-500/15 text-red-600' },
-  { title: 'Careers', titleAr: 'الوظائف', href: '/careers', keywords: ['careers', 'jobs', 'work', 'employment', 'hiring', 'وظائف'], icon: Briefcase, description: 'Join our team', descriptionAr: 'انضم لفريقنا', group: 'explore', color: 'bg-amber-500/15 text-amber-600' },
-  { title: 'Location', titleAr: 'الموقع', href: '/location', keywords: ['location', 'map', 'directions', 'address', 'badr', 'موقع'], icon: MapPin, description: 'How to find us', descriptionAr: 'كيف تصل إلينا', group: 'explore', color: 'bg-rose-500/15 text-rose-600' },
-  { title: 'FAQ', titleAr: 'الأسئلة الشائعة', href: '/faq', keywords: ['faq', 'questions', 'help', 'support', 'أسئلة'], icon: HelpCircle, description: 'Common questions', descriptionAr: 'الأسئلة الشائعة', group: 'explore', color: 'bg-fuchsia-500/15 text-fuchsia-600' },
-  { title: 'Campus Map', titleAr: 'خريطة الحرم', href: '/campus-map', keywords: ['campus', 'map', '3d', 'building', 'خريطة'], icon: Map, description: '3D campus overview', descriptionAr: 'نظرة عامة ثلاثية الأبعاد', group: 'explore', color: 'bg-lime-500/15 text-lime-600' },
+  { title: 'Home', titleAr: 'الرئيسية', href: '/', keywords: ['home', 'main', 'landing', 'الرئيسية'], icon: Home, description: 'Back to homepage', descriptionAr: 'العودة للصفحة الرئيسية', group: 'main', color: 'bg-primary/15 text-primary' },
+  { title: 'About Us', titleAr: 'من نحن', href: '/about', keywords: ['about', 'history', 'mission', 'vision', 'من نحن'], icon: Info, description: 'Our story & mission', descriptionAr: 'قصتنا ورسالتنا', group: 'main', color: 'bg-primary/15 text-primary' },
+  { title: 'Services', titleAr: 'الخدمات', href: '/services', keywords: ['services', 'medical', 'healthcare', 'treatment', 'خدمات'], icon: Stethoscope, description: 'Medical services offered', descriptionAr: 'الخدمات الطبية المقدمة', group: 'main', color: 'bg-primary/15 text-primary' },
+  { title: 'Find a Doctor', titleAr: 'ابحث عن طبيب', href: '/doctors', keywords: ['doctor', 'physician', 'specialist', 'find', 'طبيب'], icon: UserSearch, description: 'Browse our medical team', descriptionAr: 'تصفح فريقنا الطبي', group: 'main', color: 'bg-primary/15 text-primary' },
+  { title: 'Contact Us', titleAr: 'اتصل بنا', href: '/contact', keywords: ['contact', 'phone', 'email', 'address', 'اتصل'], icon: Phone, description: 'Get in touch', descriptionAr: 'تواصل معنا', group: 'main', color: 'bg-accent/15 text-accent' },
+  { title: 'Facilities', titleAr: 'المرافق', href: '/facilities', keywords: ['facilities', 'building', 'campus', 'hospital', 'مرافق'], icon: Building2, description: 'Our world-class facilities', descriptionAr: 'مرافقنا العالمية', group: 'explore', color: 'bg-primary/15 text-primary' },
+  { title: 'Medical Tourism', titleAr: 'السياحة العلاجية', href: '/medical-tourism', keywords: ['tourism', 'travel', 'international', 'patient', 'سياحة', 'علاجية'], icon: Plane, description: 'International patient services', descriptionAr: 'خدمات المرضى الدوليين', group: 'explore', color: 'bg-primary/15 text-primary' },
+  { title: 'Research', titleAr: 'الأبحاث', href: '/research', keywords: ['research', 'science', 'innovation', 'study', 'أبحاث'], icon: FlaskConical, description: 'Innovation & research', descriptionAr: 'الابتكار والبحث', group: 'explore', color: 'bg-primary/10 text-primary' },
+  { title: 'Partnerships', titleAr: 'الشراكات', href: '/partnerships', keywords: ['partnership', 'collaborate', 'partner', 'شراكات'], icon: Handshake, description: 'Our global partners', descriptionAr: 'شركاؤنا العالميون', group: 'explore', color: 'bg-primary/15 text-primary' },
+  { title: 'Development Phases', titleAr: 'مراحل التطوير', href: '/development-phases', keywords: ['development', 'phases', 'construction', 'progress', 'تطوير', 'مراحل'], icon: Layers, description: 'Project milestones', descriptionAr: 'مراحل المشروع', group: 'explore', color: 'bg-primary/10 text-primary' },
+  { title: 'Investment', titleAr: 'الاستثمار', href: '/investment', keywords: ['investment', 'invest', 'finance', 'opportunity', 'استثمار'], icon: TrendingUp, description: 'Investment opportunities', descriptionAr: 'فرص الاستثمار', group: 'explore', color: 'bg-accent/15 text-accent' },
+  { title: 'Insurance & Billing', titleAr: 'التأمين والفواتير', href: '/insurance', keywords: ['insurance', 'billing', 'payment', 'coverage', 'تأمين', 'فواتير'], icon: Shield, description: 'Insurance & payment info', descriptionAr: 'معلومات التأمين والدفع', group: 'explore', color: 'bg-accent/15 text-accent' },
+  { title: 'News', titleAr: 'الأخبار', href: '/news', keywords: ['news', 'updates', 'press', 'media', 'أخبار'], icon: Newspaper, description: 'Latest updates', descriptionAr: 'آخر الأخبار', group: 'explore', color: 'bg-accent/20 text-accent' },
+  { title: 'Careers', titleAr: 'الوظائف', href: '/careers', keywords: ['careers', 'jobs', 'work', 'employment', 'hiring', 'وظائف'], icon: Briefcase, description: 'Join our team', descriptionAr: 'انضم لفريقنا', group: 'explore', color: 'bg-primary/10 text-primary' },
+  { title: 'Location', titleAr: 'الموقع', href: '/location', keywords: ['location', 'map', 'directions', 'address', 'badr', 'موقع'], icon: MapPin, description: 'How to find us', descriptionAr: 'كيف تصل إلينا', group: 'explore', color: 'bg-primary/15 text-primary' },
+  { title: 'FAQ', titleAr: 'الأسئلة الشائعة', href: '/faq', keywords: ['faq', 'questions', 'help', 'support', 'أسئلة'], icon: HelpCircle, description: 'Common questions', descriptionAr: 'الأسئلة الشائعة', group: 'explore', color: 'bg-primary/15 text-primary' },
+  { title: 'Campus Map', titleAr: 'خريطة الحرم', href: '/campus-map', keywords: ['campus', 'map', '3d', 'building', 'خريطة'], icon: Map, description: '3D campus overview', descriptionAr: 'نظرة عامة ثلاثية الأبعاد', group: 'explore', color: 'bg-primary/10 text-primary' },
 ];
 
 interface DoctorEntry {
@@ -55,14 +55,14 @@ interface DoctorEntry {
 }
 
 const doctorEntries: DoctorEntry[] = [
-  { name: 'Dr. Ahmed Hassan', nameAr: 'د. أحمد حسن', specialty: 'Cardiology', specialtyAr: 'أمراض القلب', rating: 4.9, color: 'bg-red-500' },
-  { name: 'Dr. Fatima Al-Sayed', nameAr: 'د. فاطمة السيد', specialty: 'Neurology', specialtyAr: 'الأعصاب', rating: 4.8, color: 'bg-purple-500' },
-  { name: 'Dr. Mohamed Khalil', nameAr: 'د. محمد خليل', specialty: 'Orthopedics', specialtyAr: 'العظام', rating: 4.9, color: 'bg-blue-500' },
-  { name: 'Dr. Sara Ibrahim', nameAr: 'د. سارة إبراهيم', specialty: 'Pediatrics', specialtyAr: 'طب الأطفال', rating: 4.7, color: 'bg-pink-500' },
-  { name: 'Dr. Omar Mahmoud', nameAr: 'د. عمر محمود', specialty: 'Oncology', specialtyAr: 'الأورام', rating: 4.9, color: 'bg-orange-500' },
-  { name: 'Dr. Layla Abdel-Rahman', nameAr: 'د. ليلى عبد الرحمن', specialty: 'Ophthalmology', specialtyAr: 'طب العيون', rating: 4.8, color: 'bg-teal-500' },
-  { name: 'Dr. Khaled Nasser', nameAr: 'د. خالد ناصر', specialty: 'Internal Medicine', specialtyAr: 'الباطنة', rating: 4.7, color: 'bg-indigo-500' },
-  { name: 'Dr. Nour El-Din', nameAr: 'د. نور الدين', specialty: 'Surgery', specialtyAr: 'الجراحة', rating: 4.9, color: 'bg-emerald-500' },
+  { name: 'Dr. Ahmed Hassan', nameAr: 'د. أحمد حسن', specialty: 'Cardiology', specialtyAr: 'أمراض القلب', rating: 4.9, color: 'bg-secondary' },
+  { name: 'Dr. Fatima Al-Sayed', nameAr: 'د. فاطمة السيد', specialty: 'Neurology', specialtyAr: 'الأعصاب', rating: 4.8, color: 'bg-primary' },
+  { name: 'Dr. Mohamed Khalil', nameAr: 'د. محمد خليل', specialty: 'Orthopedics', specialtyAr: 'العظام', rating: 4.9, color: 'bg-secondary' },
+  { name: 'Dr. Sara Ibrahim', nameAr: 'د. سارة إبراهيم', specialty: 'Pediatrics', specialtyAr: 'طب الأطفال', rating: 4.7, color: 'bg-primary' },
+  { name: 'Dr. Omar Mahmoud', nameAr: 'د. عمر محمود', specialty: 'Oncology', specialtyAr: 'الأورام', rating: 4.9, color: 'bg-accent' },
+  { name: 'Dr. Layla Abdel-Rahman', nameAr: 'د. ليلى عبد الرحمن', specialty: 'Ophthalmology', specialtyAr: 'طب العيون', rating: 4.8, color: 'bg-primary' },
+  { name: 'Dr. Khaled Nasser', nameAr: 'د. خالد ناصر', specialty: 'Internal Medicine', specialtyAr: 'الباطنة', rating: 4.7, color: 'bg-primary' },
+  { name: 'Dr. Nour El-Din', nameAr: 'د. نور الدين', specialty: 'Surgery', specialtyAr: 'الجراحة', rating: 4.9, color: 'bg-primary' },
 ];
 
 const TRENDING = ['Cardiology', 'Find a Doctor', 'Campus Map', 'Medical Tourism', 'Careers'];
@@ -225,7 +225,7 @@ const SearchBar: React.FC = () => {
             <>
               <CommandGroup heading={
                 <span className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground">
-                  <Flame className="w-3 h-3 text-orange-400" />
+                  <Flame className="w-3 h-3 text-accent" />
                   {isAr ? 'الأكثر بحثاً' : 'Trending'}
                 </span>
               }>
@@ -337,8 +337,8 @@ const SearchBar: React.FC = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-1 shrink-0">
-                    <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-                    <span className="text-xs font-medium text-amber-600">{doc.rating}</span>
+                    <Star className="w-3 h-3 fill-accent text-accent" />
+                    <span className="text-xs font-medium text-accent">{doc.rating}</span>
                   </div>
                 </CommandItem>
               ))}

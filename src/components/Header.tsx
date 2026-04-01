@@ -107,7 +107,7 @@ const Header: React.FC = () => {
               <img
                 src={isScrolled ? darkLogo : lightLogo}
                 alt="CapitalMed"
-                className="h-full w-auto object-contain transition-opacity duration-300"
+                className={`h-full w-auto object-contain transition-all duration-300 ${!isScrolled ? 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]' : ''}`}
               />
             </Link>
 

@@ -30,7 +30,7 @@ const LaplazaPage: React.FC = () => {
             <section className="page-hero">
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                        className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+                        className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">
                         {t('laPlaza.tagline')}
                     </motion.p>
                     <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
@@ -38,7 +38,7 @@ const LaplazaPage: React.FC = () => {
                         {t('laPlaza.badge')}
                     </motion.h1>
                     <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-lg text-white/60 max-w-2xl mx-auto">
+                        className="text-lg text-white/90 max-w-2xl mx-auto">
                         {getLocalized(
                             'A CAPITALMED hospital delivering world-class healthcare with compassion and excellence.',
                             'مستشفى تابع لكابيتال ميد يقدم رعاية صحية عالمية المستوى بتعاطف وتميز.',
@@ -92,7 +92,7 @@ const LaplazaPage: React.FC = () => {
                                 variants={fadeUp}
                                 className="premium-card text-center p-6"
                             >
-                                <div className="stat-number text-secondary">{stat.value}</div>
+                                <div className="stat-number text-primary">{stat.value}</div>
                                 <div className="text-muted-foreground text-sm">
                                     {getLocalized(stat.labelEn, stat.labelAr, stat.labelFr)}
                                 </div>
@@ -133,8 +133,8 @@ const LaplazaPage: React.FC = () => {
                                 whileHover={{ y: -4, boxShadow: '0 12px 24px -4px rgba(0,40,100,0.08)' }}
                                 className="premium-card p-6 cursor-pointer"
                             >
-                                <div className="h-12 w-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-300">
-                                    <feature.icon className="w-6 h-6 text-secondary" />
+                                <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors duration-300">
+                                    <feature.icon className="w-6 h-6 text-primary" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-foreground mb-2">
                                     {getLocalized(feature.titleEn, feature.titleAr, feature.titleFr)}
@@ -167,22 +167,22 @@ const LaplazaPage: React.FC = () => {
                                     </h2>
                                     <div className="space-y-4 text-muted-foreground">
                                         <div className="flex items-start gap-3">
-                                            <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                                            <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                                             <span>{getLocalized('CAPITALMED Healthcare City, Badr City, New Cairo, Egypt', 'كابيتال ميد سيتي الصحية، مدينة بدر، القاهرة الجديدة، مصر', 'CAPITALMED Healthcare City, Badr City, Nouveau Caire, Égypte')}</span>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
+                                            <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                                             <span dir="ltr">16999</span>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <Clock className="w-5 h-5 text-secondary flex-shrink-0" />
+                                            <Clock className="w-5 h-5 text-primary flex-shrink-0" />
                                             <span>{getLocalized('24/7 Emergency Services', 'خدمات الطوارئ على مدار الساعة', 'Urgences 24h/24')}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-3">
                                     <Link to="/doctors">
-                                        <Button className="w-full bg-secondary hover:bg-secondary/90 text-white">
+                                        <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                                             {t('hero.cta.doctor')}
                                         </Button>
                                     </Link>

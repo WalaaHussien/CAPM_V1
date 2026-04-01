@@ -71,7 +71,7 @@ const CookieConsent: React.FC = () => {
                                 <div className="flex flex-wrap gap-3">
                                     <Button
                                         onClick={handleAcceptAll}
-                                        className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                                        className="bg-accent hover:bg-accent/90 text-accent-foreground"
                                         size="sm"
                                     >
                                         {t('cookies.acceptAll')}

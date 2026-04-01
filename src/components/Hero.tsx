@@ -53,8 +53,10 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5, ease: 'easeInOut' }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(224,72%,10%)]/65 via-[hsl(224,68%,13%)]/45 to-[hsl(220,60%,16%)]/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(224,70%,10%)]/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(193,100%,10%)]/80 via-[hsl(193,100%,18%)]/55 to-[hsl(193,90%,24%)]/18" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(193,100%,8%)]/50 to-transparent" />
+        {/* Cyan glow accent */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_40%,hsl(193_100%_50%_/_0.12)_0%,transparent_70%)]" />
       </div>
 
       {/* Content */}
@@ -64,7 +66,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-secondary sm:mb-4 sm:text-sm"
+            className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent sm:mb-4 sm:text-sm"
           >
             {t('hero.smartCity')}
           </motion.p>
@@ -91,7 +93,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mb-8 max-w-xl text-sm leading-relaxed text-white/70 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:mb-10 sm:text-base"
+            className="mb-8 max-w-xl text-sm leading-relaxed text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)] sm:mb-10 sm:text-base"
           >
             {t('hero.description')}
           </motion.p>
@@ -109,7 +111,7 @@ const Hero: React.FC = () => {
               </Button>
             </Link>
             <Link to="/about" className="w-full sm:w-auto">
-              <Button size="lg" className="bg-white text-foreground hover:bg-white/90 rounded-[8px] px-8 h-12 text-sm font-semibold border-0 w-full sm:w-auto">
+              <Button size="lg" className="bg-white/10 text-white hover:bg-primary hover:text-primary-foreground rounded-[8px] px-8 h-12 text-sm font-semibold border border-white/30 hover:border-primary w-full sm:w-auto backdrop-blur-sm transition-all duration-200">
                 {t('hero.cta.learn')}
               </Button>
             </Link>
@@ -125,8 +127,8 @@ const Hero: React.FC = () => {
             {[
               { value: '577K m²', label: 'Campus Area' },
               { value: '$1.2B', label: 'Investment' },
-              { value: '4,500+', label: 'Hospital Beds' },
-              { value: '100+', label: 'Specialties' },
+              { value: '4,000+', label: 'Hospital Beds' },
+              { value: '~100', label: 'Specialties' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -135,7 +137,7 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.7 + i * 0.1 }}
               >
                 <p className="text-white font-bold text-base sm:text-lg drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">{stat.value}</p>
-                <p className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</p>
+                <p className="text-white/80 text-xs uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>

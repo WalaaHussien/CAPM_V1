@@ -13,7 +13,7 @@ const InvestmentPage: React.FC = () => {
   const { t, language } = useLanguage();
   const stats = [
     { value: '144', label: t('investment.stats.acres') },
-    { value: '2k+', label: t('investment.stats.beds') },
+    { value: '4k+', label: t('investment.stats.beds') },
     { value: '19', label: t('investment.stats.centres') },
     { value: '70', label: t('investment.stats.theaters') },
   ];
@@ -25,19 +25,19 @@ const InvestmentPage: React.FC = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      
+
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              className="text-secondary text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('investment.hero.label')}</motion.p>
+              className="text-accent text-xs font-semibold uppercase tracking-[0.2em] mb-3">{t('investment.hero.label')}</motion.p>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold text-white mb-4">{t('investment.hero.title')}</motion.h1>
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-white/60 max-w-2xl mx-auto mb-8">{t('investment.hero.subtitle')}</motion.p>
+              className="text-lg text-white/90 max-w-2xl mx-auto mb-8">{t('investment.hero.subtitle')}</motion.p>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
               className="flex justify-center gap-6 sm:gap-8 flex-wrap">
-              {stats.map((s, i) => (<div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/50">{s.label}</p></div>))}
+              {stats.map((s, i) => (<div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/80">{s.label}</p></div>))}
             </motion.div>
           </div>
         </section>
@@ -82,7 +82,7 @@ const InvestmentPage: React.FC = () => {
           </motion.div>
         </section>
       </main>
-      
+
     </motion.div>
   );
 };

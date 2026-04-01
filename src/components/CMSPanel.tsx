@@ -59,7 +59,7 @@ const CMSPanel: React.FC = () => {
                   <Edit3 className="w-4 h-4" />
                   Hero Section
                 </h3>
-                
+
                 <div className="space-y-3">
                   <div>
                     <Label htmlFor="title_en">Title (English)</Label>
@@ -101,8 +101,8 @@ const CMSPanel: React.FC = () => {
                   </div>
                 </div>
 
-                <Button 
-                  onClick={() => handleSave('home-hero')} 
+                <Button
+                  onClick={() => handleSave('home-hero')}
                   className="w-full"
                   disabled={Object.keys(editingContent).length === 0}
                 >
@@ -118,14 +118,14 @@ const CMSPanel: React.FC = () => {
                   <Edit3 className="w-4 h-4" />
                   Statistics
                 </h3>
-                
+
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { key: 'patients', label: 'Patients', default: '500000' },
-                    { key: 'beds', label: 'Beds', default: '4500' },
-                    { key: 'icu', label: 'ICU Beds', default: '450' },
-                    { key: 'operating', label: 'Operating Rooms', default: '120' },
-                    { key: 'providers', label: 'Providers', default: '3000' },
+                    { key: 'patients', label: 'Patients', default: '5000000' },
+                    { key: 'beds', label: 'Beds', default: '4000' },
+                    { key: 'icu', label: 'ICU Beds', default: '700' },
+                    { key: 'operating', label: 'Operating Rooms', default: '70' },
+                    { key: 'providers', label: 'Providers', default: '15000' },
                     { key: 'specialties', label: 'Specialties', default: '100' },
                   ].map((stat) => (
                     <div key={stat.key}>
@@ -141,8 +141,8 @@ const CMSPanel: React.FC = () => {
                   ))}
                 </div>
 
-                <Button 
-                  onClick={() => handleSave('home-stats')} 
+                <Button
+                  onClick={() => handleSave('home-stats')}
                   className="w-full"
                   disabled={Object.keys(editingContent).length === 0}
                 >
