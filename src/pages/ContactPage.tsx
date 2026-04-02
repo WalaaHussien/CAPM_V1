@@ -6,17 +6,18 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { toast } from 'sonner';
 
 const ContactPage: React.FC = () => {
   const { t, isRTL } = useLanguage();
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', purpose: '', subject: '', message: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success(t('contact.form.success'));
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', purpose: '', subject: '', message: '' });
   };
 
   const contactInfo = [
@@ -90,9 +91,29 @@ const ContactPage: React.FC = () => {
                     <Input id="phone" type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="rounded-[6px]" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject" className="text-sm">{t('contact.form.subject')}</Label>
-                    <Input id="subject" value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} required className="rounded-[6px]" />
+                    <Label htmlFor="purpose" className="text-sm">{t('contact.form.purpose')}</Label>
+                    <Select value={formData.purpose} onValueChange={(value) => setFormData({ ...formData, purpose: value })}>
+                      <SelectTrigger className="rounded-[6px]">
+                        <SelectValue placeholder={t('contact.form.purpose.placeholder')} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="patient">{t('contact.form.purpose.patient')}</SelectItem>
+                        <SelectItem value="appointment">{t('contact.form.purpose.appointment')}</SelectItem>
+                        <SelectItem value="medical-tourism">{t('contact.form.purpose.tourism')}</SelectItem>
+                        <SelectItem value="investor">{t('contact.form.purpose.investor')}</SelectItem>
+                        <SelectItem value="partner">{t('contact.form.purpose.partner')}</SelectItem>
+                        <SelectItem value="career">{t('contact.form.purpose.career')}</SelectItem>
+                        <SelectItem value="research">{t('contact.form.purpose.research')}</SelectItem>
+                        <SelectItem value="media">{t('contact.form.purpose.media')}</SelectItem>
+                        <SelectItem value="callback">{t('contact.form.purpose.callback')}</SelectItem>
+                        <SelectItem value="other">{t('contact.form.purpose.other')}</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="subject" className="text-sm">{t('contact.form.subject')}</Label>
+                  <Input id="subject" value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} required className="rounded-[6px]" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-sm">{t('contact.form.message')}</Label>

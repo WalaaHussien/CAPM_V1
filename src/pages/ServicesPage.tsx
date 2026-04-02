@@ -177,12 +177,9 @@ const ServicesPage: React.FC = () => {
             className="bg-primary/5 border border-primary/15 rounded-xl p-10 md:p-14 text-center">
             <h2 className="text-3xl font-bold text-foreground mb-3">{t('services.cta.title')}</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t('services.cta.subtitle')}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-[8px]">
-                {t('services.cta.appointment')}
-              </Button>
+            <div className="flex justify-center">
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="rounded-[8px]">
+                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-[8px]">
                   {t('services.cta.contact')}
                 </Button>
               </Link>

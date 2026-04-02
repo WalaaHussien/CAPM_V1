@@ -71,7 +71,7 @@ const DevelopmentPhasesPage: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center mx-auto mb-2">
                   <Calendar className="w-5 h-5 text-white" />
                 </div>
-                <p className="text-xl font-bold text-accent">{m.year}</p>
+                <p className="text-xl font-bold" style={{ color: '#0088AD' }}>{m.year}</p>
                 <p className="text-xs text-muted-foreground">{m.event}</p>
               </motion.div>
             ))}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MapPin, Clock, Briefcase, Filter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -116,7 +117,7 @@ const CareersPage: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex justify-end pt-4 border-t border-border/30">
-                        <Button className="w-full sm:w-auto rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground">{isAr ? 'قدم الآن' : 'Apply Now'}</Button>
+                        <Link to="/contact"><Button className="w-full sm:w-auto rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground">{isAr ? 'قدم الآن' : 'Apply Now'}</Button></Link>
                       </div>
                     </DialogContent>
                   </Dialog>
