@@ -159,8 +159,11 @@ const ServicesPage: React.FC = () => {
                 ))}
               </ul>
               <Button size="lg" className="bg-destructive hover:bg-destructive/90 text-white rounded-[8px]">
-                {t('services.emergency.call')}
-              </Button>
+                <a href="tel:19999" style={{ textDecoration: 'none' }}>
+                  <Button size="lg" className="bg-destructive hover:bg-destructive/90 text-white rounded-[8px]">
+                    {t('services.emergency.call')}
+                  </Button>
+                </a>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
               className="aspect-video rounded-xl overflow-hidden bg-muted/30 border border-border">
