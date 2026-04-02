@@ -40,7 +40,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Cardiologie interventionnelle', 'Électrophysiologie', 'Chirurgie cardiaque', 'Réhabilitation'],
   },
   {
-    icon: Brain, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Brain, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '38+', fellowships: '10',
     name_en: 'Neurology & Neurosurgery', name_ar: 'الأعصاب وجراحة المخ والأعصاب', name_fr: 'Neurologie & Neurochirurgie',
@@ -52,7 +52,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Centre AVC', 'Épilepsie', 'Tumeurs cérébrales', 'Chirurgie spinale'],
   },
   {
-    icon: Bone, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Bone, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '52+', fellowships: '15',
     name_en: 'Orthopedics & Sports Medicine', name_ar: 'العظام وطب الرياضة', name_fr: 'Orthopédie & Médecine du Sport',
@@ -64,7 +64,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Remplacement articulaire', 'Arthroscopie', 'Troubles spinaux', 'Rééducation sportive'],
   },
   {
-    icon: Baby, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Baby, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '60+', fellowships: '18',
     name_en: 'Women & Children', name_ar: 'صحة المرأة والأطفال', name_fr: 'Femmes & Enfants',
@@ -76,7 +76,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Grossesse à risque', 'NICU', 'Chirurgie pédiatrique', 'Oncologie féminine'],
   },
   {
-    icon: Microscope, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Microscope, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '70+', fellowships: '20',
     name_en: 'Oncology & Cancer Care', name_ar: 'الأورام وعلاج السرطان', name_fr: 'Oncologie & Soins du Cancer',
@@ -88,7 +88,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Oncologie médicale', 'Radiothérapie', 'Oncologie chirurgicale', 'Soins palliatifs'],
   },
   {
-    icon: Eye, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Eye, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '25+', fellowships: '8',
     name_en: 'Ophthalmology', name_ar: 'طب وجراحة العيون', name_fr: 'Ophtalmologie',
@@ -100,7 +100,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Chirurgie LASIK', 'Chirurgie rétinienne', 'Chirurgie cataracte', 'Glaucome'],
   },
   {
-    icon: Activity, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Activity, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '55+', fellowships: '14',
     name_en: 'Internal Medicine', name_ar: 'الطب الباطني', name_fr: 'Médecine Interne',
@@ -112,7 +112,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Endocrinologie', 'Gastroentérologie', 'Rhumatologie', 'Néphrologie'],
   },
   {
-    icon: Scissors, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Scissors, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '48+', fellowships: '16',
     name_en: 'Surgery & Minimally Invasive', name_ar: 'الجراحة العامة وطفيفة التوغل', name_fr: 'Chirurgie Générale & Mini-Invasive',
@@ -124,7 +124,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Chirurgie robotique', 'Laparoscopie', 'Chirurgie bariatrique', 'Transplantation'],
   },
   {
-    icon: Wind, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Wind, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '30+', fellowships: '9',
     name_en: 'Pulmonology & Chest', name_ar: 'أمراض الصدر والتنفس', name_fr: 'Pneumologie',
@@ -136,7 +136,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Asthme & BPCO', 'Bronchoscopie', 'Études du sommeil', 'Réhabilitation'],
   },
   {
-    icon: Smile, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Smile, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '35+', fellowships: '11',
     name_en: 'Dentistry & Maxillofacial', name_ar: 'طب الأسنان وجراحة الفك والوجه', name_fr: 'Dentisterie & Maxillo-Faciale',
@@ -160,7 +160,7 @@ const specialties: Specialty[] = [
     highlights_fr: ['Traumatologie Niv. 1', 'Réanimation', 'Soins intensifs', 'Réponse rapide'],
   },
   {
-    icon: Dna, color: 'from-primary to-[hsl(193,100%,33%)]',
+    icon: Dna, color: 'from-accent to-[hsl(40,85%,35%)]',
     image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600&h=400',
     teamSize: '28+', fellowships: '12',
     name_en: 'Precision Medicine & Genetics', name_ar: 'الطب الدقيق والجينات', name_fr: 'Médecine de Précision & Génétique',
