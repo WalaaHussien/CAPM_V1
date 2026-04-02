@@ -287,18 +287,7 @@ const DoctorsPage: React.FC = () => {
                       <GraduationCap className="w-3.5 h-3.5 text-primary" />
                       <span>{spec.fellowships} {txt('international fellowships', 'زمالة دولية', 'bourses internationales')}</span>
                     </div>
-                    <div className="flex gap-2">
-                      <Link to="/contact" className="flex-1">
-                        <Button size="sm" variant="outline" className="w-full rounded-[8px] text-xs">
-                          {txt('Contact Us', 'تواصل معنا', 'Contactez-nous')}
-                        </Button>
-                      </Link>
-                      <a href="tel:16999">
-                        <Button size="sm" variant="outline" className="rounded-[8px]">
-                          <Phone className="w-3.5 h-3.5" />
-                        </Button>
-                      </a>
-                    </div>
+
                   </div>
                 </motion.div>
               );
