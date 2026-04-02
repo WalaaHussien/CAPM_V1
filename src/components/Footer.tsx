@@ -33,8 +33,8 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(180deg, #00B4E6 0%, #0088AD 100%)' }}>
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 15% 85%, hsl(193 100% 50% / 0.25) 0%, transparent 50%), radial-gradient(circle at 85% 15%, hsl(193 100% 55% / 0.12) 0%, transparent 45%), radial-gradient(circle at 50% 50%, hsl(40 90% 52% / 0.06) 0%, transparent 60%)' }} />
+    <footer className="relative text-white overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(193,62%,34%) 0%, hsl(208,48%,22%) 100%)' }}>
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 15% 85%, hsl(193 50% 55% / 0.18) 0%, transparent 50%), radial-gradient(circle at 85% 15%, hsl(208 50% 45% / 0.10) 0%, transparent 45%), radial-gradient(circle at 50% 50%, hsl(38 78% 46% / 0.05) 0%, transparent 60%)' }} />
       <div className="relative container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}

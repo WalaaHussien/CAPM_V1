@@ -15,106 +15,106 @@
     --header-height: 7.75rem;
     --section-space: clamp(4rem, 7vw, 6rem);
 
-    /* Primary Blue #00B4E6 (Footer Color) */
-    --primary: 193 100% 45%; /* #00B4E6 in HSL */
+    /* Primary — Accessible Teal-Blue (60-30-10: 10% accent action color) */
+    --primary: 193 65% 38%; /* Desaturated accessible teal */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 193 100% 80%; /* lighter version of #00B4E6 */
-    --primary-dark: 193 100% 34%; /* darker version of #00B4E6 */
+    --primary-light: 193 50% 78%; /* Soft teal for hover states */
+    --primary-dark: 193 70% 26%; /* Deep teal for active/pressed */
 
-    /* Secondary — Dark Primary */
-    --secondary: 193 100% 34%;
+    /* Secondary — Calm Navy (30% structural color) */
+    --secondary: 208 42% 28%; /* Deep professional navy-blue */
     --secondary-foreground: 0 0% 100%;
 
-    /* Pure white background */
-    --background: 0 0% 100%;
-    /* Main text #1A1A1A */
-    --foreground: 0 0% 10%;
+    /* 60% — Background surfaces: very light cool white */
+    --background: 200 18% 99%; /* Barely-tinted white — easy on eyes */
+    /* Main text — high contrast, slightly warm dark */
+    --foreground: 210 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 210 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 210 25% 12%;
 
-    /* Muted — Section alternate #F7FAFC */
-    --muted: 204 45% 98%;
-    --muted-foreground: 220 9% 46%;
+    /* Muted — Gentle gray-blue for alternate sections */
+    --muted: 203 30% 96%;
+    --muted-foreground: 210 14% 44%;
 
-    /* Accent — Orange #F3A916 */
-    --accent: 40 90% 52%;
+    /* Accent — Warm Gold (softer, more accessible) */
+    --accent: 38 78% 46%; /* #D4930E — darker amber for WCAG AA contrast */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 52%; /* Slightly softer red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 224 18% 88%;
-    --input: 224 18% 86%;
-    --ring: 193 100% 45%;
+    --border: 210 20% 90%; /* Soft cool-gray borders */
+    --input: 210 20% 92%;
+    --ring: 193 65% 38%;
 
     --radius: 0.5rem;
 
-    /* Gradients — cyan primary */
-    --gradient-hero: linear-gradient(135deg, hsl(193 100% 33%) 0%, hsl(193 100% 24%) 50%, hsl(193 90% 16%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(193 100% 45%) 0%, hsl(193 100% 34%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(193 100% 38%) 0%, hsl(193 100% 26%) 100%);
-    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(193 58% 96%) 100%);
+    /* Gradients — refined soft teal-navy */
+    --gradient-hero: linear-gradient(135deg, hsl(193 65% 30%) 0%, hsl(208 50% 22%) 50%, hsl(215 55% 15%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(193 65% 38%) 0%, hsl(208 42% 28%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(193 55% 42%) 0%, hsl(193 60% 30%) 100%);
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(203 30% 96%) 100%);
 
-    /* Shadows — cyan-tinted */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 180, 230, 0.05);
-    --shadow-md: 0 4px 12px -2px rgba(0, 180, 230, 0.10);
-    --shadow-lg: 0 12px 24px -4px rgba(0, 180, 230, 0.12);
-    --shadow-xl: 0 20px 40px -8px rgba(0, 180, 230, 0.14);
+    /* Shadows — soft neutral, not color-tinted */
+    --shadow-sm: 0 1px 3px 0 rgba(30, 60, 80, 0.06);
+    --shadow-md: 0 4px 12px -2px rgba(30, 60, 80, 0.09);
+    --shadow-lg: 0 12px 24px -4px rgba(30, 60, 80, 0.10);
+    --shadow-xl: 0 20px 40px -8px rgba(30, 60, 80, 0.12);
 
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 193 100% 45%;
+    --sidebar-foreground: 210 25% 12%;
+    --sidebar-primary: 193 65% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 193 58% 94%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 193 18% 88%;
-    --sidebar-ring: 193 100% 45%;
+    --sidebar-accent: 203 30% 95%;
+    --sidebar-accent-foreground: 210 25% 12%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 193 65% 38%;
   }
 
   .dark {
-    --background: 224 45% 8%;
-    --foreground: 220 20% 95%;
+    --background: 212 35% 9%; /* Deep navy, not pure black — easier on eyes */
+    --foreground: 210 25% 93%;
 
-    --card: 224 40% 11%;
-    --card-foreground: 220 20% 95%;
+    --card: 210 30% 12%;
+    --card-foreground: 210 25% 93%;
 
-    --popover: 224 40% 11%;
-    --popover-foreground: 220 20% 95%;
+    --popover: 210 30% 12%;
+    --popover-foreground: 210 25% 93%;
 
-    --primary: 193 100% 45%;
+    --primary: 193 60% 50%; /* Slightly brighter teal on dark bg for contrast */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 193 100% 80%;
-    --primary-dark: 193 100% 34%;
+    --primary-light: 193 50% 72%;
+    --primary-dark: 193 65% 36%;
 
-    --secondary: 193 100% 40%;
+    --secondary: 208 38% 38%; /* Lighter navy for dark mode surfaces */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 224 30% 15%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 210 28% 16%;
+    --muted-foreground: 210 18% 60%;
 
-    --accent: 40 90% 55%;
+    --accent: 38 72% 52%; /* Slightly brighter gold on dark */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 50%;
+    --destructive: 0 60% 52%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 224 30% 18%;
-    --input: 224 30% 18%;
-    --ring: 193 100% 45%;
+    --border: 210 25% 20%;
+    --input: 210 25% 20%;
+    --ring: 193 60% 50%;
 
-    --sidebar-background: 224 45% 7%;
-    --sidebar-foreground: 220 20% 90%;
-    --sidebar-primary: 193 100% 45%;
+    --sidebar-background: 212 35% 8%;
+    --sidebar-foreground: 210 25% 88%;
+    --sidebar-primary: 193 60% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 224 30% 13%;
-    --sidebar-accent-foreground: 220 20% 90%;
-    --sidebar-border: 224 30% 16%;
-    --sidebar-ring: 193 100% 52%;
+    --sidebar-accent: 210 28% 15%;
+    --sidebar-accent-foreground: 210 25% 88%;
+    --sidebar-border: 210 25% 18%;
+    --sidebar-ring: 193 60% 55%;
   }
 }
 
@@ -250,7 +250,7 @@
   /* Premium Page Hero with wave divider */
   .page-hero {
     @apply relative overflow-hidden pb-20 pt-44 md:pb-24 md:pt-48;
-    background: linear-gradient(180deg, #00B4E6 0%, #0088AD 100%);
+    background: linear-gradient(180deg, hsl(193, 62%, 34%) 0%, hsl(208, 48%, 22%) 100%);
   }
 
   .page-hero h1,
